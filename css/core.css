@@ -47,31 +47,34 @@ html {
 .header {
   background: #333;
   margin: 0;
-  padding: 50px;
+  padding: 130px 50px 100px 50px;
   width: 500px;
 }
 .header h1 {
-  text-shadow: 0 1px 0 #bb6110, 0 2px 0 #b45d10, 0 3px 0 #a7560e, 0 4px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 1px 0 #bb6110, 0 2px 0 #b45d10, 0 3px 0 #a7560e;
   font-size: 72px;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-.navbarFancy {
+.navbar {
   margin: 30px 0 15px 0;
 }
-.navbarFancy ul {
+.navbar ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
   text-align: center;
 }
 
-.navbarFancy ul li {
+.navbar ul li {
   display: inline;
   padding: 0 15px;
 }
 
-.navbarFancy ul li a {
+.navbar ul li a {
   color: #e37513;
   font-family: 'Linden Hill', serif;
   font-size: 32px;
@@ -80,10 +83,10 @@ html {
   position: relative;
   text-decoration: none;
 }
-.navbarFancy ul li a:hover {
+.navbar ul li a:hover {
   color: #e37513;
 }
-.navbarFancy ul li a::after{
+.navbar ul li a::after{
     content:'';
     position:absolute;
     width: 100%;
@@ -92,7 +95,7 @@ html {
     bottom:10px;
     border-bottom: 1px solid #e37513;
 }
-.navbarFancy ul li a:hover::after{
+.navbar ul li a:hover::after{
     content:'';
     position:absolute;
     width: 100%;
