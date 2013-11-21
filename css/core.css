@@ -1,3 +1,8 @@
+* {
+  color: rgb(70, 70, 70);
+  font-family: 'Open Sans', Helvetica, sans-serif;/*'Source Sans Pro', sans-serif;*/
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -5,7 +10,6 @@ body {
 }
 
 h1 {
-  color: #e37513;
   font-family: 'Linden Hill', serif;
   font-style:italic;
   font-weight: normal;
@@ -25,6 +29,10 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+p {
+  font-size: 13px;
 }
 
 .center {
@@ -51,12 +59,35 @@ html {
   width: 500px;
 }
 .header h1 {
-  text-shadow: 0 1px 0 #bb6110, 0 2px 0 #b45d10, 0 3px 0 #a7560e;
+  color: #fff;
+  text-shadow: 0 1px 0 #aaa, 0 2px 0 #999, 0 3px 0 #888;
+ /* color: #e37513;
+  text-shadow: 0 1px 0 #bb6110, 0 2px 0 #b45d10, 0 3px 0 #a7560e;*/
   font-size: 72px;
   line-height: 0;
   margin: 0;
   padding: 0;
   text-align: center;
+}
+.header p {
+  margin-top: 30px;
+}
+
+.headerSmall {
+  background: #333;
+  display: block;
+  margin: 0;
+  padding: 40px 50px 20px 50px;
+  width: 500px;
+}
+.headerSmall h1 {
+  float: left;
+  font-size: 36px;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  /*text-shadow: 0 1px 0 #bb6110, 0 2px 0 #b45d10, 0 3px 0 #a7560e;*/
 }
 
 .navbar {
@@ -75,7 +106,7 @@ html {
 }
 
 .navbar ul li a {
-  color: #e37513;
+  color: #fff;
   font-family: 'Linden Hill', serif;
   font-size: 32px;
   font-style:italic;
@@ -84,7 +115,7 @@ html {
   text-decoration: none;
 }
 .navbar ul li a:hover {
-  color: #e37513;
+  color: #fff;
 }
 .navbar ul li a::after{
     content:'';
@@ -93,7 +124,7 @@ html {
     height: 0;
     left:0;
     bottom:10px;
-    border-bottom: 1px solid #e37513;
+    border-bottom: 1px solid #fff;
 }
 .navbar ul li a:hover::after{
     content:'';
@@ -102,5 +133,53 @@ html {
     height: 0;
     left:0;
     bottom:10px;
-    border-bottom: 1px dashed #e37513;
+    border-bottom: 1px dashed #fff;
+}
+
+
+.navbarSmall {
+  float: right;
+  margin: -12px 0 0 0;
+}
+.navbarSmall ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+
+.navbarSmall ul li {
+  display: inline;
+  padding: 0 15px;
+}
+
+.navbarSmall ul li a {
+  color: #fff;
+  font-family: 'Linden Hill', serif;
+  font-size: 24px;
+  font-style:italic;
+  padding-bottom: -100px !important;
+  position: relative;
+  text-decoration: none;
+}
+.navbarSmall ul li a:hover {
+  color: #fff;
+}
+.smallCurrent::after{
+    content:'';
+    position:absolute;
+    width: 100%;
+    height: 0;
+    left:0;
+    bottom:6px;
+    border-bottom: 1px solid #fff;
+}
+.navbarSmall ul li a:hover::after{
+    content:'';
+    position:absolute;
+    width: 100%;
+    height: 0;
+    left:0;
+    bottom:6px;
+    border-bottom: 1px dashed #fff;
 }
