@@ -51,6 +51,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-color: rgb(200,200,200);
 }
 
 li {
