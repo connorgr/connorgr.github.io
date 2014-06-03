@@ -40,8 +40,9 @@ for(var i = 0; i < 16; i++) {
   }
   is.push(index);
 }
+console.log(is);
 
-var animals = Array.apply(null, Array(16)).map(function(_,i) {return allAnimals[i];});
+var animals = Array.apply(null, Array(16)).map(function(_,i) {return allAnimals[is[i]];});
 console.log(animals);
 console.log('animals.length:', animals.length);
 
@@ -57,6 +58,7 @@ for (a in animals) {
 
 times = Array.apply(null, Array(16)).map(function (_, i) {return (i+4)+':00';});
 
+// Create the sighting values using a Guassian function
 function sightings(center, maximum) {
   var base = 0,
       curveWidth = 4; // for noiser patterns might parameterize this
