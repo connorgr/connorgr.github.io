@@ -9,6 +9,25 @@
 
   </head>
     <body>
+    <div id="container"></div>
+    <p id="hideToggle" style="color:#ccc;cursor:pointer">Show/Hide helpers</p>
+    <div id="configPanel">
+      <hr />
+      <div style="background-color:#fff">
+        <span style="width:170px;display:block;text-align:right">Color Top: <input type="text" style="width:60px" id="inputTop"/></span>
+        <span style="width:170px;display:block;text-align:right">Color Middle: <input type="text" style="width:60px" id="inputMiddle"/></span>
+        <span style="width:170px;display:block;text-align:right">Color Bottom: <input type="text" style="width:60px" id="inputBottom"/></span>
+        <button id="changeColors">Generate</button>
+        <p>The color middle box is optional.</p>
+      </div>
+      <hr />
+      <div>
+        <button id="blackBg">Black background</button>
+        <button id="grayBg">Gray background</button>
+        <button id="whiteBg">White background</button>
+      </div>
+    </div>
+
     <script src="d3.js"></script>
     <script src="matrix.js"></script>
     </body>
