@@ -1,35 +1,76 @@
+// var allAnimals = ['BLEE',
+//                   'CLAB',
+//                   'DROH',
+//                   'FILK',
+//                   'FRIM',
+//                   'GORF',
+//                   'GREE',
+//                   'GURK',
+//                   'HIFT',
+//                   'JARB',
+//                   'JUSK',
+//                   'KERN',
+//                   'KICE',
+//                   'KWIM',
+//                   'KWOH',
+//                   'LERD',
+//                   'MALB',
+//                   'NEEK',
+//                   'NORT',
+//                   'PLOO',
+//                   'PRAH',
+//                   'PROV',
+//                   'RALT',
+//                   'RILM',
+//                   'SLAH',
+//                   'SLUB',
+//                   'SPAG',
+//                   'SWIV',
+//                   'TASP',
+//                   'VRAY',
+//                   'WERF',
+//                   'ZIRL'];
+
+// The following are all roughly the same horizontal width
+// var allAnimals = ['BLEE',
+//                   'CLAB',
+//                   'GORF',
+//                   'GREE',
+//                   'GURK',
+//                   'JARB',
+//                   'JUSK',
+//                   'KERN',
+//                   'KWIM',
+//                   'LERD',
+//                   'MALB',
+//                   'NEEK',
+//                   'PRAH',
+//                   'PROV',
+//                   'RALT',
+//                   'SLAH',
+//                   'SLUB',
+//                   'SPAG',
+//                   'TASP',
+//                   'VRAY',
+//                   'WERF'];
+
 var allAnimals = ['BLEE',
                   'CLAB',
-                  'DROH',
-                  'FILK',
-                  'FRIM',
                   'GORF',
-                  'GREE',
-                  'GURK',
-                  'HIFT',
-                  'JARB',
                   'JUSK',
-                  'KERN',
-                  'KICE',
                   'KWIM',
-                  'KWOH',
                   'LERD',
                   'MALB',
                   'NEEK',
-                  'NORT',
-                  'PLOO',
                   'PRAH',
-                  'PROV',
                   'RALT',
-                  'RILM',
                   'SLAH',
                   'SLUB',
                   'SPAG',
-                  'SWIV',
                   'TASP',
                   'VRAY',
-                  'WERF',
-                  'ZIRL'];
+                  'WERF'];
+
 
 // Generate indecies
 var is = [];
@@ -60,17 +101,22 @@ times = Array.apply(null, Array(16)).map(function (_, i) {return (i+4)+':00';});
 
 // Create the sighting values using a Guassian function
 function sightings(center, maximum) {
+  var widthOptions = [2,3,4],
+      widthScalar = Math.random();
+  while (widthScalar <= .5) {
+    widthScalar = Math.random();
+  }
   var base = 0,
-      curveWidth = 4; // for noiser patterns might parameterize this
+      curveWidth = widthScalar*widthOptions[parseInt(Math.random()*widthOptions.length)]; // for noiser patterns might parameterize this
   var gaussianFn = function(x){return maximum*Math.exp(-(Math.pow(x-center,2)/(2*Math.pow(curveWidth,2))))+base};
-  //var max = -Math.pow(center,2) + center*2*center;
-  //return function(x) {return maximum*((-Math.pow(x,2) + center*2*x)/max)};
   return gaussianFn;
 }
 var data = [];
 for (a in animals) {
-  var center = Math.random() > .5 ? times.length/4 : 3*(times.length/4),
-    sightingFn = sightings(center, 1);
+  var centerScalar = Math.random()*2 * (Math.random() > .5 ? -1 : 1)
+      center = centerScalar + (Math.random() > .5 ? times.length/4 : 3*(times.length/4)),
+      sightingFn = sightings(center, 1);
+  console.log(center, centerScalar);
   for (t in times) {
     var s = sightingFn(t);//Math.random();
     data.push({animal:a, sightings:s, time:t});
