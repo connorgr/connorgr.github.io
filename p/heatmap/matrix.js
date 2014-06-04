@@ -1,59 +1,3 @@
-// var allAnimals = ['BLEE',
-//                   'CLAB',
-//                   'DROH',
-//                   'FILK',
-//                   'FRIM',
-//                   'GORF',
-//                   'GREE',
-//                   'GURK',
-//                   'HIFT',
-//                   'JARB',
-//                   'JUSK',
-//                   'KERN',
-//                   'KICE',
-//                   'KWIM',
-//                   'KWOH',
-//                   'LERD',
-//                   'MALB',
-//                   'NEEK',
-//                   'NORT',
-//                   'PLOO',
-//                   'PRAH',
-//                   'PROV',
-//                   'RALT',
-//                   'RILM',
-//                   'SLAH',
-//                   'SLUB',
-//                   'SPAG',
-//                   'SWIV',
-//                   'TASP',
-//                   'VRAY',
-//                   'WERF',
-//                   'ZIRL'];
-
-// The following are all roughly the same horizontal width
-// var allAnimals = ['BLEE',
-//                   'CLAB',
-//                   'GORF',
-//                   'GREE',
-//                   'GURK',
-//                   'JARB',
-//                   'JUSK',
-//                   'KERN',
-//                   'KWIM',
-//                   'LERD',
-//                   'MALB',
-//                   'NEEK',
-//                   'PRAH',
-//                   'PROV',
-//                   'RALT',
-//                   'SLAH',
-//                   'SLUB',
-//                   'SPAG',
-//                   'TASP',
-//                   'VRAY',
-//                   'WERF'];
-
 var allAnimals = ['BLEE',
                   'CLAB',
                   'GORF',
@@ -123,10 +67,10 @@ for (a in animals) {
   }
 }
 
-var svg = d3.select('body')
+var svg = d3.select('#container')
   .append('svg')
-  .attr('height', 800)
-  .attr('width', 800)
+  .attr('height', 300)
+  .attr('width', 500)
   .append('g')
     .attr('transform',('translate(100,0)'));
 
@@ -140,10 +84,10 @@ var color = d3.scale.linear()
     .domain([0, .5, 1])
     .range(colors);
 
-
 // HEATMAP
 
-svg.selectAll('rect')
+var heatmap = svg.append('g');
+heatmap.selectAll('rect')
   .data(data)
   .enter()
   .append('rect')
@@ -225,8 +169,8 @@ var yTextG = svg.append('g'),
             .text(function(d){return d;});
 
 // LEGEND
-
-var gradient = svg.append("svg:defs")
+var legend = svg.append('g');
+var gradient = legend.append("svg:defs")
   .append("svg:linearGradient")
     .attr("id", "gradient")
     .attr("x1", "0%")
@@ -249,8 +193,72 @@ gradient.append("svg:stop")
     .attr("stop-color", colors[2])
     .attr("stop-opacity", 1);
 
-svg.append('rect')
+legend.append('rect')
   .attr('x', VIZ_WIDTH+15)
   .attr('height', VIZ_HEIGHT)
   .attr('width', 20)
   .style('fill', 'url(#gradient)');
+
+
+// Color configs
+d3.select('#blackBg').on('click', function(e){d3.select('body').style('background-color','black')});
+d3.select('#grayBg').on('click', function(e){d3.select('body').style('background-color','gray')});
+d3.select('#whiteBg').on('click', function(e){d3.select('body').style('background-color','white')});
+
+d3.select('#hideToggle')
+  .on('click', function(e) {
+    var panel = d3.select('#configPanel');
+    if (panel.style('display') == 'none') {
+      panel.style('display', 'block');
+    } else {
+      panel.style('display', 'none');
+    }
+  });
+
+d3.select('#changeColors')
+  .on('click', function(e) {
+    var bot = d3.select('#inputBottom').property('value'),
+        mid = d3.select('#inputMiddle').property('value'),
+        top = d3.select('#inputTop').property('value');
+
+    colors = mid == '' ? [bot,top] : [bot, mid, top];
+    color.range(colors);
+    heatmap.selectAll('rect').style('fill', function(d){return color(d.sightings)});
+
+  legend.selectAll('*').remove();
+  var gradient = legend.append("svg:defs")
+  .append("svg:linearGradient")
+    .attr("id", "gradient")
+    .attr("x1", "0%")
+    .attr("y1", "100%")
+    .attr("x2", "0%")
+    .attr("y2", "0%");
+
+  gradient.append("svg:stop")
+      .attr("offset", "0%")
+      .attr("stop-color", colors[0])
+      .attr("stop-opacity", 1);
+
+  if(colors.length == 2) {
+    gradient.append("svg:stop")
+        .attr("offset", "100%")
+        .attr("stop-color", colors[1])
+        .attr("stop-opacity", 1);
+  } else {
+    gradient.append("svg:stop")
+        .attr("offset", "50%")
+        .attr("stop-color", colors[1])
+        .attr("stop-opacity", 1);
+
+    gradient.append("svg:stop")
+        .attr("offset", "100%")
+        .attr("stop-color", colors[2])
+        .attr("stop-opacity", 1);
+  }
+
+  legend.append('rect')
+    .attr('x', VIZ_WIDTH+15)
+    .attr('height', VIZ_HEIGHT)
+    .attr('width', 20)
+    .style('fill', 'url(#gradient)');
+  });
