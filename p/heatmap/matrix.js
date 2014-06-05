@@ -57,13 +57,21 @@ function sightings(center, maximum) {
 }
 var data = [];
 for (a in animals) {
-  var centerScalar = Math.random()*2 * (Math.random() > .5 ? -1 : 1)
+  // center variables are the large magnitude sighting times
+  // littleCenter variables are noise on the non-large side of the heatmap
+  var sideOfMostSightings = Math.random() > .5 ? -1 : 1,
+      centerScalar = Math.random()*2 * sideOfMostSightings,
       center = centerScalar + (Math.random() > .5 ? times.length/4 : 3*(times.length/4)),
-      sightingFn = sightings(center, 1);
-  console.log(center, centerScalar);
+      sightingFn = sightings(center, 1),
+      littleCenterScalar = Math.random()*2*sideOfMostSightings,
+      littleCenterSide = center < times.length/2 ? 3*(times.length/4) : times.length/4,
+      littleCenter = littleCenterScalar + littleCenterSide,
+      littleSightingFn = sightings(littleCenter, Math.random() * (.6 - 0) + 0);
+
   for (t in times) {
-    var s = sightingFn(t);//Math.random();
-    data.push({animal:a, sightings:s, time:t});
+    var s = sightingFn(t),
+        sPrime = littleSightingFn(t);
+    data.push({animal:a, sightings:s+sPrime, time:t});
   }
 }
 
@@ -201,9 +209,30 @@ legend.append('rect')
 
 
 // Color configs
-d3.select('#blackBg').on('click', function(e){d3.select('body').style('background-color','black')});
-d3.select('#grayBg').on('click', function(e){d3.select('body').style('background-color','gray')});
-d3.select('#whiteBg').on('click', function(e){d3.select('body').style('background-color','white')});
+d3.select('#blackBg').on('click', function(e){
+  d3.select('body').style('background-color','black');
+  xText.style('fill','gray');
+  xTextName.style('fill', 'gray');
+  yText.style('fill','gray');
+  xTicks.style('stroke','gray');
+  xTextG.selectAll('line').style('stroke','gray');
+});
+d3.select('#grayBg').on('click', function(e){
+  d3.select('body').style('background-color','gray');
+  xText.style('fill','black');
+  xTextName.style('fill', 'black');
+  yText.style('fill','black');
+  xTicks.style('stroke','black');
+  xTextG.selectAll('line').style('stroke','black');
+});
+d3.select('#whiteBg').on('click', function(e){
+  d3.select('body').style('background-color','white');
+  xText.style('fill','black');
+  xTextName.style('fill', 'black');
+  yText.style('fill','black');
+  xTicks.style('stroke','black');
+  xTextG.selectAll('line').style('stroke','black');
+});
 
 d3.select('#hideToggle')
   .on('click', function(e) {
