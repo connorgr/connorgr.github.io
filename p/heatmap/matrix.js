@@ -103,7 +103,16 @@ heatmap.selectAll('rect')
     .attr('y', function(d){return d.animal*CELL_HEIGHT})
     .attr('height', CELL_HEIGHT)
     .attr('width', CELL_WIDTH)
-    .style('fill', function(d){return color(d.sightings)});
+    .style('fill', function(d){return color(d.sightings)})
+    .on('click', function(d) {
+      console.log(d);
+      var i = d.animal,
+          a = animals[parseInt(i)],
+          t = d.time;
+      d3.select('#indexLoc')
+        .text(i + ' ('+a+'), '+t);
+      console.log(i,a,t);
+    });
 
 
 // Axis lines
