@@ -75,147 +75,116 @@ for (a in animals) {
   }
 }
 
-var svg = d3.select('#container')
-  .append('svg')
-  .attr('height', 300)
-  .attr('width', 500)
-  .append('g')
-    .attr('transform',('translate(100,0)'));
+function addMatrix(colors, container, bgColor) {
 
-var CELL_HEIGHT = 15,
-    CELL_WIDTH = 15,
-    VIZ_HEIGHT = CELL_HEIGHT*animals.length,
-    VIZ_WIDTH = CELL_WIDTH*times.length;
+  var color = d3.scale.linear()
+      .domain([0, .5, 1])
+      .range(colors);
 
-var colors = ['blue', 'black', 'yellow']
-var color = d3.scale.linear()
-    .domain([0, .5, 1])
-    .range(colors);
+  var svg = container.append('svg')
+    .attr('height', 300)
+    .attr('width', 300)
+    .style('background-color', bgColor)
+    .style('padding-top', '20px')
+    .style('padding-left', '20px')
+    .append('g')
+      .attr('transform',('translate(30,0)'));
 
-// HEATMAP
+  var CELL_HEIGHT = 15,
+      CELL_WIDTH = 15,
+      VIZ_HEIGHT = CELL_HEIGHT*animals.length,
+      VIZ_WIDTH = CELL_WIDTH*times.length;
 
-var heatmap = svg.append('g');
-heatmap.selectAll('rect')
-  .data(data)
-  .enter()
-  .append('rect')
-    .attr('x', function(d){return d.time*CELL_WIDTH})
-    .attr('y', function(d){return d.animal*CELL_HEIGHT})
-    .attr('height', CELL_HEIGHT)
-    .attr('width', CELL_WIDTH)
-    .style('fill', function(d){return color(d.sightings)})
-    .on('click', function(d) {
-      console.log(d);
-      var i = d.animal,
-          a = animals[parseInt(i)],
-          t = d.time;
-      d3.select('#indexLoc')
-        .text(i + ' ('+a+'), '+t);
-      console.log(i,a,t);
-    });
+  // HEATMAP
 
+  var heatmap = svg.append('g');
+  heatmap.selectAll('rect')
+    .data(data)
+    .enter()
+    .append('rect')
+      .attr('x', function(d){return d.time*CELL_WIDTH})
+      .attr('y', function(d){return d.animal*CELL_HEIGHT})
+      .attr('height', CELL_HEIGHT)
+      .attr('width', CELL_WIDTH)
+      .style('fill', function(d){return color(d.sightings)})
+      .on('click', function(d) {
+        var i = d.animal,
+            a = animals[parseInt(i)],
+            t = d.time;
+        d3.select('#indexLoc')
+          .text(i + ' ('+a+'), '+t);
+      });
 
-// Axis lines
-var xTextG = svg.append('g'),
-    xTicks = xTextG.selectAll('line')
-        .data(times)
-        .enter()
-        .append('line')
-          .attr('x1', function(d,i) {return i*CELL_WIDTH + CELL_WIDTH/2})
-          .attr('y1', function(d,i) {return VIZ_HEIGHT + 2})
-          .attr('x2', function(d,i) {return i*CELL_WIDTH + CELL_WIDTH/2})
-          .attr('y2', function(d,i) {
-            if (i%4 == 0) {
-              return VIZ_HEIGHT + 8;
-            }
-            return VIZ_HEIGHT + 5;
-          })
-          .attr("stroke-width", 1)
-          .attr("stroke", "black"),
-    xText = xTextG.selectAll('text')
-        .data(times)
-        .enter()
-          .append('text')
-            .attr('x', function(d,i){return i*CELL_WIDTH + CELL_WIDTH/2})
-            .attr('y', VIZ_HEIGHT+20)
-            .attr('fill', '#000')
-            .attr('text-anchor', 'middle')
-            .style('font-family','sans-serif')
-            .style('font-size', '.75em')
-            .text(function(d,i){
-              if (i%4 != 0) {
-                return '';
+  // Axis lines
+  var xTextG = svg.append('g'),
+      xTicks = xTextG.selectAll('line')
+          .data(times)
+          .enter()
+          .append('line')
+            .attr('x1', function(d,i) {return i*CELL_WIDTH + CELL_WIDTH/2})
+            .attr('y1', function(d,i) {return VIZ_HEIGHT + 2})
+            .attr('x2', function(d,i) {return i*CELL_WIDTH + CELL_WIDTH/2})
+            .attr('y2', function(d,i) {
+              if (i%4 == 0) {
+                return VIZ_HEIGHT + 8;
               }
-              return d;
-            }),
-    xTextName = xTextG.append('text')
-        .attr('x', VIZ_WIDTH/2)
-        .attr('y', VIZ_HEIGHT+35)
-        .attr('text-anchor', 'middle')
-        .style('font-family', 'sans-serif')
-        .style('font-weight', 'bold')
-        .text('Time');
+              return VIZ_HEIGHT + 5;
+            })
+            .attr('stroke-width', 1)
+            .attr('stroke', bgColor == '#000' ? '#fff' : '#000'),
+      xText = xTextG.selectAll('text')
+          .data(times)
+          .enter()
+            .append('text')
+              .attr('x', function(d,i){return i*CELL_WIDTH + CELL_WIDTH/2})
+              .attr('y', VIZ_HEIGHT+20)
+              .attr('fill', bgColor == '#000' ? '#fff' : '#000')
+              .attr('text-anchor', 'middle')
+              .style('font-family','sans-serif')
+              .style('font-size', '.75em')
+              .text(function(d,i){
+                if (i%4 != 0) {
+                  return '';
+                }
+                return d;
+              }),
+      xTextName = xTextG.append('text')
+          .attr('x', VIZ_WIDTH/2)
+          .attr('y', VIZ_HEIGHT+35)
+          .attr('text-anchor', 'middle')
+          .style('font-family', 'sans-serif')
+          .style('font-weight', 'bold')
+          .text('Time');
 
-xTextG.append('line')
-    .attr('x1', CELL_WIDTH/2)
-    .attr('y1', VIZ_HEIGHT + 2)
-    .attr('x2', VIZ_WIDTH/2 - CELL_WIDTH/2)
-    .attr('y2', VIZ_HEIGHT + 2)
-    .attr("stroke-width", 1)
-    .attr("stroke", "black");
+  xTextG.append('line')
+      .attr('x1', CELL_WIDTH/2)
+      .attr('y1', VIZ_HEIGHT + 2)
+      .attr('x2', VIZ_WIDTH/2 - CELL_WIDTH/2)
+      .attr('y2', VIZ_HEIGHT + 2)
+      .attr('stroke-width', 1)
+      .attr('stroke', bgColor == '#000' ? '#fff' : '#000');
 
-xTextG.append('line')
-    .attr('x1', VIZ_WIDTH/2 + CELL_WIDTH/2)
-    .attr('y1', VIZ_HEIGHT + 2)
-    .attr('x2', VIZ_WIDTH - CELL_WIDTH/2)
-    .attr('y2', VIZ_HEIGHT + 2)
-    .attr("stroke-width", 1)
-    .attr("stroke", "black");
+  xTextG.append('line')
+      .attr('x1', VIZ_WIDTH/2 + CELL_WIDTH/2)
+      .attr('y1', VIZ_HEIGHT + 2)
+      .attr('x2', VIZ_WIDTH - CELL_WIDTH/2)
+      .attr('y2', VIZ_HEIGHT + 2)
+      .attr('stroke-width', 1)
+      .attr('stroke', bgColor == '#000' ? '#fff' : '#000');
 
-var yTextG = svg.append('g'),
-    yText = yTextG.selectAll('text')
-        .data(animals)
-        .enter()
-          .append('text')
-            .attr('x', -2)
-            .attr('y', function(d,i) { return i*CELL_WIDTH + 3*(CELL_HEIGHT/4) })
-            .attr('fill', '#000')
-            .attr('text-anchor', 'end')
-            .style('font-family', 'sans-serif')
-            .style('font-size', '.75em')
-            .text(function(d){return d;});
-
-// LEGEND
-var legend = svg.append('g');
-var gradient = legend.append("svg:defs")
-  .append("svg:linearGradient")
-    .attr("id", "gradient")
-    .attr("x1", "0%")
-    .attr("y1", "100%")
-    .attr("x2", "0%")
-    .attr("y2", "0%");
-
-gradient.append("svg:stop")
-    .attr("offset", "0%")
-    .attr("stop-color", colors[0])
-    .attr("stop-opacity", 1);
-
-gradient.append("svg:stop")
-    .attr("offset", "50%")
-    .attr("stop-color", colors[1])
-    .attr("stop-opacity", 1);
-
-gradient.append("svg:stop")
-    .attr("offset", "100%")
-    .attr("stop-color", colors[2])
-    .attr("stop-opacity", 1);
-
-legend.append('rect')
-  .attr('x', VIZ_WIDTH+15)
-  .attr('height', VIZ_HEIGHT)
-  .attr('width', 20)
-  .style('fill', 'url(#gradient)');
-
+  var yTextG = svg.append('g'),
+      yText = yTextG.selectAll('text')
+          .data(animals)
+          .enter()
+            .append('text')
+              .attr('x', -2)
+              .attr('y', function(d,i) { return i*CELL_WIDTH + 3*(CELL_HEIGHT/4) })
+              .attr('fill', bgColor == '#000' ? '#fff' : '#000')
+              .attr('text-anchor', 'end')
+              .style('font-family', 'sans-serif')
+              .style('font-size', '.75em')
+              .text(function(d){return d;});
+}
 
 // Color configs
 d3.select('#blackBg').on('click', function(e){
@@ -253,50 +222,32 @@ d3.select('#hideToggle')
     }
   });
 
+function addMatrices(colors) {
+    var wrapper = d3.select('#container').append('div'),
+      colorInfo = wrapper.append('p').text(colors);
+  wrapper.style('border-bottom', '1px solid #ccc')
+      .style('display', 'inline-block');
+  addMatrix(colors, wrapper, '#fff');
+  addMatrix(colors.reverse(), wrapper, '#fff');
+  wrapper.append('br');
+  addMatrix(colors.reverse(), wrapper, '#000');
+  addMatrix(colors.reverse(), wrapper, '#000');
+}
+
 d3.select('#changeColors')
   .on('click', function(e) {
     var bot = d3.select('#inputBottom').property('value'),
         mid = d3.select('#inputMiddle').property('value'),
         top = d3.select('#inputTop').property('value');
 
-    colors = mid == '' ? [bot,top] : [bot, mid, top];
-    color.range(colors);
-    heatmap.selectAll('rect').style('fill', function(d){return color(d.sightings)});
+    bot = bot == '' ? 'black' : bot;
+    top = top == '' ? 'black' : top;
+    var colors = mid == '' ? [bot,top] : [bot, mid, top];
 
-  legend.selectAll('*').remove();
-  var gradient = legend.append("svg:defs")
-  .append("svg:linearGradient")
-    .attr("id", "gradient")
-    .attr("x1", "0%")
-    .attr("y1", "100%")
-    .attr("x2", "0%")
-    .attr("y2", "0%");
-
-  gradient.append("svg:stop")
-      .attr("offset", "0%")
-      .attr("stop-color", colors[0])
-      .attr("stop-opacity", 1);
-
-  if(colors.length == 2) {
-    gradient.append("svg:stop")
-        .attr("offset", "100%")
-        .attr("stop-color", colors[1])
-        .attr("stop-opacity", 1);
-  } else {
-    gradient.append("svg:stop")
-        .attr("offset", "50%")
-        .attr("stop-color", colors[1])
-        .attr("stop-opacity", 1);
-
-    gradient.append("svg:stop")
-        .attr("offset", "100%")
-        .attr("stop-color", colors[2])
-        .attr("stop-opacity", 1);
-  }
-
-  legend.append('rect')
-    .attr('x', VIZ_WIDTH+15)
-    .attr('height', VIZ_HEIGHT)
-    .attr('width', 20)
-    .style('fill', 'url(#gradient)');
+    // color.range(colors);
+    //heatmap.selectAll('rect').style('fill', function(d){return color(d.sightings)});
+    addMatrices(colors);
   });
+
+addMatrices(['#458eff', '#dcf3ff']);
+addMatrices(['#458eff', '#042d3f']);
