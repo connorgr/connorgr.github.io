@@ -180,6 +180,7 @@ function addMatrix(colors, container, bgColor) {
           .attr('text-anchor', 'middle')
           .style('font-family', 'sans-serif')
           .style('font-size', '.75em')
+          .style('fill', bgColor == '#000' ? '#fff' : '#000')
           .text('Early'),
       xTextLate = xTextG.append('text')
           .attr('x', 3*(VIZ_WIDTH/4))
@@ -187,6 +188,7 @@ function addMatrix(colors, container, bgColor) {
           .attr('text-anchor', 'middle')
           .style('font-family', 'sans-serif')
           .style('font-size', '.75em')
+          .style('fill', bgColor == '#000' ? '#fff' : '#000')
           .text('Late'),
       xTextName = xTextG.append('text')
           .attr('x', VIZ_WIDTH/2)
@@ -194,6 +196,7 @@ function addMatrix(colors, container, bgColor) {
           .attr('text-anchor', 'middle')
           .style('font-family', 'sans-serif')
           .style('font-weight', 'bold')
+          .style('fill', bgColor == '#000' ? '#fff' : '#000')
           .text('Time');
 
   xTextG.append('line')
