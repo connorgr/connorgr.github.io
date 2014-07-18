@@ -68,17 +68,43 @@ for (a in animals) {
       littleCenter = littleCenterScalar + littleCenterSide,
       littleSightingFn = sightings(littleCenter, Math.random() * (.6 - 0) + 0);
 
+
   for (t in times) {
     var s = sightingFn(t),
-        sPrime = littleSightingFn(t);
-    data.push({animal:a, sightings:s+sPrime, time:t});
+        sPrime = littleSightingFn(t),
+        sFinal = s+sPrime > 1 ? 1 : s+sPrime;
+    data.push({animal:a, sightings:sFinal, time:t});
   }
 }
 
+var sightingVals = data.map(function(d) { return d.sightings;}),
+    maxValue = Math.max.apply(null, sightingVals);
+
+// Norm the values ot make sure the max is 1
+for (d in data) {
+  var oldVal = data[d].sightings,
+      newVal = oldVal/maxValue;
+
+  data[d].sightings = newVal;
+}
+
+var sightingValsNew = data.map(function(d) {return d.sightings;}),
+    maxValueNew = Math.max.apply(null, sightingValsNew);
+
+// Make sure that the maximum value is what it should be.
+if (maxValueNew > 1) {
+  console.log(maxValueNew,maxValue, maxValue*c);
+  throw('Something went wrong when normalizing sightings values');
+}
+
+
 function addMatrix(colors, container, bgColor) {
 
+  // This domain means that the domain [0,1] is the center 80%,
+  // meaning that there is 10% contrast to either end of the legend
+  // and actdual values
   var color = d3.scale.linear()
-      .domain([0, .5, 1])
+      .domain([-.125, 1.125]) // total of 1.25 and 1/1.25 = 0.8
       .range(colors);
 
   var svg = container.append('svg')
@@ -148,9 +174,23 @@ function addMatrix(colors, container, bgColor) {
                 }
                 return d;
               }),
+      xTextEarly = xTextG.append('text')
+          .attr('x', VIZ_WIDTH/4)
+          .attr('y', VIZ_HEIGHT+35)
+          .attr('text-anchor', 'middle')
+          .style('font-family', 'sans-serif')
+          .style('font-size', '.75em')
+          .text('Early'),
+      xTextLate = xTextG.append('text')
+          .attr('x', 3*(VIZ_WIDTH/4))
+          .attr('y', VIZ_HEIGHT+35)
+          .attr('text-anchor', 'middle')
+          .style('font-family', 'sans-serif')
+          .style('font-size', '.75em')
+          .text('Late'),
       xTextName = xTextG.append('text')
           .attr('x', VIZ_WIDTH/2)
-          .attr('y', VIZ_HEIGHT+35)
+          .attr('y', VIZ_HEIGHT+50)
           .attr('text-anchor', 'middle')
           .style('font-family', 'sans-serif')
           .style('font-weight', 'bold')
@@ -232,6 +272,8 @@ function addMatrices(colors) {
   wrapper.append('br');
   addMatrix(colors.reverse(), wrapper, '#000');
   addMatrix(colors.reverse(), wrapper, '#000');
+  addMatrix(colors.reverse(), wrapper, colors[0]);
+  addMatrix(colors.reverse(), wrapper, colors[colors.length-1]);
 }
 
 d3.select('#changeColors')
@@ -249,5 +291,11 @@ d3.select('#changeColors')
     addMatrices(colors);
   });
 
-addMatrices(['#458eff', '#dcf3ff']);
-addMatrices(['#458eff', '#042d3f']);
+addMatrices(['rgb(214,39,30)', 'rgb(0,0,0)']);
+addMatrices(['rgb(214,39,30)', 'rgb(255,255,255)']);
+
+addMatrices(['rgb(44,160,44)', 'rgb(0,0,0)']);
+addMatrices(['rgb(44,160,44)', 'rgb(255,255,255)']);
+
+addMatrices(['rgb(31,119,180)', 'rgb(0,0,0)']);
+addMatrices(['rgb(31,119,180)', 'rgb(255,255,255)']);
