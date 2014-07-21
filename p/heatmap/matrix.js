@@ -1,3 +1,21 @@
+function shuffle(array) {
+  var m = array.length, t, i;
+
+  // While there remain elements to shuffle…
+  while (m) {
+
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+
+  return array;
+}
+
 var allAnimals = ['BLEE',
                   'CLAB',
                   'GORF',
@@ -43,7 +61,26 @@ for (a in animals) {
 
 times = Array.apply(null, Array(16)).map(function (_, i) {return (i+4)+':00';});
 
-// Create the sighting values using a Guassian function
+var data = [];
+
+var majoritySideNum = Math.floor(8*(animals.length/10)),
+    minoritySideNum = animals.length - majoritySideNum;
+    console.log(majoritySideNum, minoritySideNum);
+
+var majoritySide = -1,
+    minoritySide = 1;
+
+// Create a list of side flags that are paired with animals
+var sideInfo = []
+for (var i = 0; i < majoritySideNum; i++) {
+  sideInfo.push(majoritySide);
+}
+for (var i = 0; i < minoritySideNum; i++) {
+  sideInfo.push(minoritySide);
+}
+sideInfo = shuffle(sideInfo);
+
+// Returns a function to generate the sighting values using a Guassian
 function sightings(center, maximum) {
   var widthOptions = [2,3,4],
       widthScalar = Math.random();
@@ -55,24 +92,24 @@ function sightings(center, maximum) {
   var gaussianFn = function(x){return maximum*Math.exp(-(Math.pow(x-center,2)/(2*Math.pow(curveWidth,2))))+base};
   return gaussianFn;
 }
-var data = [];
-for (a in animals) {
-  // center variables are the large magnitude sighting times
-  // littleCenter variables are noise on the non-large side of the heatmap
-  var sideOfMostSightings = Math.random() > .5 ? -1 : 1,
-      centerScalar = Math.random()*2 * sideOfMostSightings,
-      center = centerScalar + (Math.random() > .5 ? times.length/4 : 3*(times.length/4)),
-      sightingFn = sightings(center, 1),
-      littleCenterScalar = Math.random()*2*sideOfMostSightings,
-      littleCenterSide = center < times.length/2 ? 3*(times.length/4) : times.length/4,
-      littleCenter = littleCenterScalar + littleCenterSide,
-      littleSightingFn = sightings(littleCenter, Math.random() * (.6 - 0) + 0);
 
+for (a in animals) {
+  var sideOfMostSightings = sideInfo[a];
+
+  var center = sideOfMostSightings < 0 ? times.length/4 : 3*(times.length/4),
+      noiseCenter = sideOfMostSightings > 0 ? times.length/4 : 3*(times.length/4);
+
+  // perturb center
+  center = center + (Math.random() > .5 ? 1 : -1)*1.25*Math.random();
+
+  var  sightingFn = sightings(center,1),
+      noiseSightingFn = sightings(noiseCenter, .2);
 
   for (t in times) {
     var s = sightingFn(t),
-        sPrime = littleSightingFn(t),
+        sPrime = noiseSightingFn(t),
         sFinal = s+sPrime > 1 ? 1 : s+sPrime;
+
     data.push({animal:a, sightings:sFinal, time:t});
   }
 }
@@ -294,11 +331,14 @@ d3.select('#changeColors')
     addMatrices(colors);
   });
 
-addMatrices(['rgb(214,39,30)', 'rgb(0,0,0)']);
-addMatrices(['rgb(214,39,30)', 'rgb(255,255,255)']);
 
-addMatrices(['rgb(44,160,44)', 'rgb(0,0,0)']);
-addMatrices(['rgb(44,160,44)', 'rgb(255,255,255)']);
 
-addMatrices(['rgb(31,119,180)', 'rgb(0,0,0)']);
-addMatrices(['rgb(31,119,180)', 'rgb(255,255,255)']);
+// addMatrices(['rgb(214,39,30)', 'rgb(0,0,0)']);
+// addMatrices(['rgb(214,39,30)', 'rgb(255,255,255)']);
+// addMatrices(['rgb(31,119,180)', 'rgb(0,0,0)']);
+// addMatrices(['rgb(31,119,180)', 'rgb(255,255,255)']);
+// addMatrices(['rgb(44,160,44)', 'rgb(0,0,0)']);
+// addMatrices(['rgb(44,160,44)', 'rgb(255,255,255)']);
+
+addMatrices(['rgb(31,119,180)','rgb(158,218,229)']);
+addMatrices(['rgb(214,39,40)','rgb(255,187,120)']);
