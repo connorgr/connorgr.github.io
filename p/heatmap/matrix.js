@@ -178,11 +178,11 @@ if (maxValueNew > 1) {
 
 
 function addMatrix(colors, container, bgColor) {
-  // This domain means that the domain [0,1] is the center 80%,
+  // This domain means that the domain [0,1] is the center 90%,
   // meaning that there is 10% contrast to either end of the legend
   // and actdual values
   var color = d3.scale.linear()
-      .domain([-.125, 1.125]) // total of 1.25 and 1/1.25 = 0.8
+      .domain([-(1/18), 1+(1/18)])
       .range(colors)
       .interpolate(d3.interpolateLab);
 
