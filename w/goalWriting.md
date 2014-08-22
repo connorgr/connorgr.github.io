@@ -1,5 +1,5 @@
-Writing Goals
-=============
+How to write better goals
+=========================
 
 One of the skills I am continually trying to improve is my ability to write
 goals (i.e., outcomes) for research. Well written goals help communicate the
@@ -22,3 +22,7 @@ and preemptively take past advice to quickly iterate on your first draft.
 ## Be specific, be quantifiable
 Avoid terms like "better," "good," and "improve." Better how? What is good? What
 will you do to improve? Be quantifiable.
+
+## Phrase goals as outcomes
+View your work in terms of what the output will be, not the process of the
+output. Doing this will help you write more active rather than passive goals.
