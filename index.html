@@ -1,137 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/core.css">
-  <link href='http://fonts.googleapis.com/css?family=Linden+Hill:400italic|Source+Sans+Pro:400,700|Open+Sans' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>Connor Gramazio</h1>
-      <div class="center">
-        <img src="images/portrait.png" />
+<!-- Start Header -->
+  <header class="top" role="header" style="border-bottom:1px dashed #ddd;">
+      <div class="container">
+        <nav role="navigation">
+          <ul class="list-inline" style="margin:15px 0;padding:0;font-size:20px;line-height:50px">
+            <li style="padding-left:0px;"><a href="#">About</a></li>
+            <li><a href="research.html">Research</a></li>
+          </ul>
+        </nav>
       </div>
-      <!-- <div class="navbar">
-        <ul>
-          <li><a href="">About</a></li>
-          <li><a href="vita.html">Vita</a></li>
+    </header>
+<!-- End Header -->
+
+<!-- Start about -->
+<div class="banner" style="padding:15px 0;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <img src="img/me.png" width="75" height="75" class="visible-xs visible-sm" style="float:left;margin-right:15px;"/>
+        <ul class="list-unstyled" style="padding:15px 0">
+          <li>connor@cs.[myUniversity] edu</li>
+          <li><a href="https://plus.google.com/+ConnorGramazio">Google+</a></li>
         </ul>
-      </div> -->
-      <p>connor at cs brown edu</p>
-      <p><a href="https://plus.google.com/+ConnorGramazio">Google+</a></p>
+        <hr />
+      </div>
     </div>
-    <div class="content">
-      <h1 class="center">What do I do?</h1>
-      <p>I am a PhD candidate at <a href="http://www.brown.edu">Brown</a>'s computer science department, where I focus on <em>visualization</em> and <em>human-computer interaction</em>. I'm advised by <a href="http://www.cs.brown.edu/~dhl">David Laidlaw</a>.</p>
 
-      <p>My work explores how visual perception can influence the use of visualizations. I collaborate with <a href="http://socrates.berkeley.edu/~plab/karen/">Karen Schloss</a> to understand these perceptual influences, and work with <a href="http://cs.brown.edu/people/faculty/braphael.html">Ben Raphael</a> to improve cancer research tools using our findings. I have also worked with <a href="http://jeffhuang.com/">Jeff Huang</a> in other HCI research areas as 20%-time projects.</p>
+    <!-- start about blurb -->
+    <div class="row" style="padding: 15px 0;">
+      <div class="col-md-6" style="max-height:500px;">
+        <p>I am a PhD candidate and NSF Graduate Research Fellow at <a href="http://www.cs.brown.edu">Brown's computer science department</a>, where I focus on <em>visualization</em> and <em>human-computer interaction</em>, advised by <a href="http://www.cs.brown.edu/~dhl">David Laidlaw</a>.</p>
 
-      <p>Before coming to Brown I graduated from <a href="http://www.tufts.edu/">Tufts University</a> with a B.S. in computer science. At Tufts, I worked with <a href="http://www.cs.tufts.edu/~remco">Remco Chang</a> and <a href="http://people.csail.mit.edu/sarasu/">Sara Su</a> on visualization research ranging from protein structure to exploring data structures in Java heaps.</p>
+        <p>I am specializing in genomics visualization and graphical perception.</p>
 
-      <p>Outside of academia I love designing things and am fascinated by music. I recently <a href="http://www.flickr.com/photos/93364639@N07/sets/72157634949862640/">traveled to Ghana</a> to continue my education about Ewe <a href="http://www.youtube.com/watch?v=6CyV7aQe7F4">dance</a> and <a href="http://en.wikipedia.org/wiki/Ewe_music">music</a>.</p>
+        <p>I approach visualization research through the lens of a <a href="http://www.cs.unc.edu/~brooks/Toolsmith-CACM.pdf">toolsmith</a>. I find myself at home when collaborating, where I help advance other areas of research while identifying generalizable visualization and HCI contributions.</p>
 
-      <hr />
-
-
-<div class="cvSection">
-  <h1>Awards &amp; Honors</h1>
-  <ul>
-    <li>NSF Graduate Research Fellow, 2012 &#8212; 2016</li>
-    <li>Andries van Dam Graduate Fellowship, 2012 &#8212; 2013</li>
-    <li>Honorable Mention, Computing Research Association&#8217;s Outstanding Undergraduate Research Award, 2011</li>
-    <li>Recipient of the de Florez Prize in Human Engineering, 2011</li>
-    <li>Placed at the 2011 Visualizing Research@Tufts Awards Ceremony, 2011</li>
-    <li>Dean of Engineering Scholar, Tufts&#8217; Summer Scholars, 2010</li>
-    <li>Tufts&#8217; Cape Cod Club Scholarship, Fall 2010 &#8212; Spring 2012</li>
-    <li>Computer Science, Engineering, and Math Scholars Scholarship, 2009 &#8212; 2010</li>
-  </ul>
-</div><!-- end Awards CV section -->
-<hr />
-
-<div class="cvSection">
-  <h1>Publications</h1>
-  <ul>
-    <li>Molli: Interactive Visualization for Exploratory Protein 
-        Analysis<br />
-        Sara Su, Connor Gramazio, Dani Extrum-Fernandez, Caitlin Crumm,
-            Lenore J. Cowen, Matt Menke, and Megan Strait. IEEE CG&amp;A, Sep-Oct 2012.</li>
-  <li>Heapviz: Interactive heap visualization for program understanding and
-          debugging<br />
-      Sean Kelley, Edward E. Aftandilian, Connor Gramazio, Nathan Ricci, 
-          Sara L. Su, and Samuel Z. Guyer. Sage's Information Visualization, May 2012.</li>
-  </ul>
-</div><!-- end Publications CV section -->
-<hr />
-
-<div class="cvSection">
-  <h1>Posters</h1>
-  <ul>
-    <li>Optimizing an SPT-Tree for Visual Analytics<br />
-        IEEE VAST 2012<br />
-        Connor Gramazio, Remco Chang</li>
-    <li>An Analytical Approach for the Creative Design of New Visualizations<br />
-        IEEE InfoVis 2011<br />
-        Garth Griffin, Shaomeng Li, Connor Gramazio, Remco Chang
-    </li>
-    <li>Moleint: Reducing Workload through Adaptive Interaction<br />
-        VIZBI 2011<br />
-        Megan Strait, Connor Gramazio, Jisoo Park, Sara L. Su, Lenore Cowen
-    </li>
-    <li>Heapviz: A Programmer's Tool for Data Structure Visualization<br />
-        VisWeek 2010 Demo<br />
-        Edward E. Aftandilian, Sean Kelley, Connor Gramazio, Nathan Ricci,
-            Sara L. Su, and Samuel Z. Guyer
-    </li>
-    <li>TuftsViewer: An intuitive interface for viewing 3D protein structures<br />
-        3DSIG 2010<br />
-        Matt Menke, Sara L. Su, Connor Gramazio, Caitlin Crumm, Daniela 
-            Extrum-Fernandez, and Lenore Cowen
-    </li>
-  </ul>
-</div><!-- end Posters CV section -->
-<hr />
-
-<div class="cvSection">
-  <h1>Work Experience</h1>
-  <dl>
-      <dt>Brown University</dt>
-      <dd><i>Graduate student, 2012 &ndash; Current</i></dd>
-      <dd>I research topics in the intersection of visualization, perception, and human-computer interaction. I am advised by <a href="www.cs.brown.edu/~dhl">David Laidlaw</a>, and I collaborate with Professor <a href="http://socrates.berkeley.edu/~plab/karen/">Karen Schloss</a>. To demonstrate how our findings transfer to application domains I also work with <a href="http://cs.brown.edu/people/faculty/braphael.html">Ben Raphael</a> to improve cancer genomics tools. I've also worked on a few HCI-dominant 20% time projects with <a href="http://jeffhuang.com/">Jeff Huang</a>.<br /><br /></dd>
-
-      <dt>Google</dt>
-      <dd><i>Software Engineer Intern, Summer 2012</i></dd>
-      <dd>During my time at Google I worked on <a href="https://plus.google.com/ripple/details?url=nytimes.com">Ripples</a>, a real-time visualization that shows public content sharing on Google+. Over the summer I implemented a new feature from the ground up, including everything from the back-end all the way up the stack to the front-end and creating the visual design.<br /><br /></dd>
-
-      <dt>Charles River Analytics</dt>
-      <dd><i>Software Engineer/Scientist Intern, Summer 2011</i></dd>
-      <dd>At Charles River Analytics I worked on human factors research that focused on temporal constraints and reducing cognitive workload for piloting multiple unmanned vehicles. I gained experience in both experimental design and prototype design and implementation.<br /><br /></dd>
-
-      <dt>Tufts University</dt>
-      <dd><i>Undergraduate Research Assistant, 2010 &ndash; 2012</i><br />
-          <i>Teaching Assistant, 2010 &ndash; 2012</i></dd>
-      <dd style="margin-bottom: 10px">While at Tufts I conducted my own visualization research on various
-          projects under the advisement of Professors <a href="http://www.cs.tufts.edu/~remco">Remco Chang</a>, <a href="http://www.cs.tufts.edu/~cowen">Lenore Cowen</a>, <a href="http://www.cs.tufts.edu/~sguyer/">Sam Guyer</a>, and Dr. <a href="http://people.csail.mit.edu/sarasu/">Sara Su</a>. I&rsquo;ve performed visualization research in  proteomics and protein bioinformatics, software analysis and debugging, and computer graphics.</dd>
-      <dd style="margin-bottom: 10px">In addition to research, I also helped teach courses in the computer science department. I  was the lead teaching assitant for computer graphics, as well as a lab instructor and teaching assistant for data structures, the second course in Tufts' computer science major.</dd>
-    </dl>
-</div><!-- end work experience CV section -->
-
-
-
-      <hr />
-      <p class="center">connor at cs brown edu</p>
-      <p class="center"><a href="https://plus.google.com/+ConnorGramazio">Google+</a></p>
+        <p>To this end, I collaborate with <a href="http://cs.brown.edu/people/faculty/braphael.html">Ben Raphael</a> (cancer genomics) and <a href="http://socrates.berkeley.edu/~plab/karen/">Karen Schloss</a> (perception). I have also collaborated with <a href="http://jeffhuang.com/">Jeff Huang</a> (HCI) on complimentary crowdsourcing research.
+        <p><br /></p>
+        <p>I recently obtained my transitional ScM in computer science from Brown. Before Brown, I was an undergraduate at <a href="http://www.tufts.edu/">Tufts University</a> where I worked with <a href="http://www.cs.tufts.edu/~remco">Remco Chang</a> and <a href="http://people.csail.mit.edu/sarasu/">Sara Su</a>. My undergraduate research ranged from protein structure depiction to exploring data structures in Java heaps. I also minored in (secular) <a href="http://en.wikipedia.org/wiki/Religious_studies">religious studies</a>.</p>
+      </div>
+      <div class="col-md-6 hidden-xs hidden-sm" style="background:url(img/me_medium.png) no-repeat right;background-size:85%;height:500px;"></div>
     </div>
+    <hr />
+    <!-- end about blurb -->
+    <div class="row" style="padding: 15px 0;">
+      <div class="col-md-8">
+        <h3>Publications</h3>
+        <ul class="list-unstyled">
+          <li><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6875989&isnumber=4359476">The relation between visualization size, grouping, and user performance</a><br /><strong>C.C. Gramazio</strong>, K.B. Schloss, D.H. Laidlaw.<br />IEEE TVCG/InfoVis &#8216;14</li>
+          <li><span style="color:rgb(66, 139, 202);">Exploring visualization designs using phylogenetic trees</span><br />S. Li, R.J. Crouser, G. Griffin, <strong>C. Gramazio</strong>, H. Schulz, H. Childs and R. Chang.<br />Visualization and Data Analysis 2015</li>
+          <li><a href="http://ivi.sagepub.com/content/12/2/163.short">Heapviz: Interactive heap visualization for program understanding and debugging</a><br />S. Kelley E.E. Aftandilian, <strong>C. Gramazio</strong>, N. Ricci, S.L. Su, S.Z. Guyer.<br />Sage's Information Visualization (extended)</li>
+          <li><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6212420&isnumber=6311364">Molli: Interactive Visualization for Exploratory Protein Analysis</a><br />S.L. Su, <strong>C. Gramazio</strong>, D. Extrum-Fernandez, C. Crumm, L.J. Cowen, M. Menke, M. Strait.<br />IEEE CG&amp;A, &#8216;12</li>
+          <li><a href="http://dl.acm.org/citation.cfm?id=1879222">Heapviz: interactive heap visualization for program understanding and debugging</a><br />EE Aftandilian, S Kelley, <strong>C. Gramazio</strong>, N Ricci, SL Su, SZ Guyer.<br />ACM SoftVis &#8216;10</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h3>Selected Awards &amp; Honors</h3>
+        <ul class="list-unstyled">
+          <li>NSF Graduate Research Fellow, &#8216;12 &#8212; &#8216;16</li>
+          <li>Andries van Dam Graduate Fellowship, &#8216;12 &#8212; &#8216;13</li>
+          <li>CRA&#8217;s Outstanding Undergraduate Research Award, Honorable Mention, &#8216;11</li>
+          <li>de Florez Prize in Human Engineering, &#8216;11</li>
+        </ul>
+      </div>
+    </div>
+    <hr />
   </div>
-  <script src="js/jquery-1.10.2.js"></script>
-  <script src="js/main.js"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+</div>
+<!-- End about -->
 
-    ga('create', 'UA-46059414-1', 'gramaz.io');
-    ga('send', 'pageview');
-  </script>
+
+  <!-- Include jQuery and bootstrap JS plugins -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
