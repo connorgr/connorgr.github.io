@@ -40,3 +40,5 @@ Thumbs.db
 ########
 *.stub
 w/
+extractMusings.py
+styleMusings.py
