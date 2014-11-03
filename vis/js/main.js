@@ -177,24 +177,28 @@ var chartArea = d3.select('#charts').append('div').attr('class', 'row')
         .attr('class', 'col-md-6')
         .attr('id', 'chartInfoArea');
 
-var legend = chartInfoDiv.append('table')
-        .attr('class', '')
-        .attr('id', 'paperCountChartLegendTable'),
-    thead = legend.append('thead').append('tr');
+var legend = chartInfoDiv.append('div')
+        .attr('id', 'paperCountChartLegendTable');
 
-thead.append('th').text('Color');
-thead.append('th').style('padding-left', '5px').text('Conference');
+legend.append('h4').text('Conference Colors');
 
-legend.append('tbody').attr('id', 'paperCountChartLegend')
-    .selectAll('tr')
+legend.selectAll('div')
     .data(conferences)
     .enter()
-    .append('tr')
+    .append('div')
+        .style('display', 'inline-block')
+        .style('margin-right', '15px')
     .each(function(d) {
         var thisEl = d3.select(this);
-        thisEl.append('td')
-            .style('background', function(d) { return color(d); });
-        thisEl.append('td').style('padding-left', '5px').text(d);
+        thisEl.append('div')
+            .style('background', function(d) { return color(d); })
+            .style('display', 'inline-block')
+            .style('height', '14px')
+            .style('width', '14px');
+        thisEl.append('span')
+            .style('font-size', '14px')
+            .style('padding-left', '5px')
+            .text(d);
     });
 
 chartInfoDiv.append('p').attr('id', 'author').style('font-weight', 'bold');
