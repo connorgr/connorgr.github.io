@@ -4,7 +4,7 @@ function barChart(params) {
   var color = params.color,
       height = 300,
       margin = {top: 30, right: 20, bottom: 30, left: 40},
-      renderWidth = 1000,
+      renderWidth = 1500,
       width = 400,
       paperHeight = params.paperHeight || 20,
       title = params.title || '';
