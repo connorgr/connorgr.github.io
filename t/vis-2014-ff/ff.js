@@ -28,10 +28,14 @@ var square = {
 
 var gridObj = {
   six: [],
+  ten: [],
   init: function () {
     this.six = new Array(36);
     for (var i = 0; i < this.six.length; i++) this.six[i] = colors.hex[i % 4];
     this.six = shuffle(this.six);
+
+    this.ten = new Array(100);
+    for (var i = 0; i < this.ten.length; i++) this.ten[i] = colors.hex[i % 4];
 
     return this;
   }
@@ -39,25 +43,32 @@ var gridObj = {
 
 var grids = data.grids;
 
+var sixGrid = grids[0].grid,
+    tenGrid = grids[40].grid,
+    setSize = 10,
+    cycleData = tenGrid;
+
+var activeGridObj = gridObj.ten;
+
 
 var rectG = svg.append('g');
 var rects = rectG.selectAll('rect')
-      .data(grids[0].grid)
+      .data(cycleData)
       .enter()
       .append('rect')
         .attr('height', square.length)
         .attr('width', square.length)
         .attr('x', function(d,i) {
-          var moveX = (i % 6) * (square.length + square.margin);
+          var moveX = (i % setSize) * (square.length + square.margin);
           return moveX;
         })
         .attr('y', function(d, i) {
-          var moveY = (parseInt(i/6)) * (square.length + square.margin);
+          var moveY = (parseInt(i/setSize)) * (square.length + square.margin);
           return moveY;
         })
         .style('fill', '#fff');
 
-var centerGrid = svg.attr('width')/2 - square.footprint*3;
+var centerGrid = svg.attr('width')/2 - square.footprint*(setSize/2);
 rectG.attr('transform', 'translate('+ centerGrid +',20)');
 
 function fade() {
@@ -65,15 +76,25 @@ function fade() {
     return Math.floor(Math.random()*(max-min+1)+min);
   }
   function pickTgtIndex(){
-    var quadrant = Math.floor(Math.random() * 4),
-        index;
-    quadrant = 0;
-    if (quadrant == 0) {
-      index = randomIntFromInterval(1,6/2 - 2)
+    var index = 0,
+        halfSetSize = Math.floor(setSize/2);
+    index = Math.floor(Math.random() * setSize * setSize);
+    while (
+      index < setSize || index > setSize*setSize - setSize
+      || Math.floor(index/setSize) == setSize - 1
+      || Math.floor(index/setSize) == 0
+      || index%setSize == setSize - 1 || index%setSize == 0
+      || index%setSize == halfSetSize
+      || index%setSize == halfSetSize - 1
+      || Math.floor(index/setSize) == halfSetSize
+      || Math.floor(index/setSize) == halfSetSize - 1
+    ) {
+      index = Math.floor(Math.random() * setSize * setSize);
     }
     return index;
   }
-  this.six = shuffle(gridObj.six);
+  this.six = shuffle(activeGridObj);
+
   var tgtIndex = pickTgtIndex();
   rects.each(function(d,i) {
     var thisEl = d3.select(this),
@@ -81,13 +102,14 @@ function fade() {
     if (i == tgtIndex) {
       thisEl.transition().duration(Math.random()*2000)
         .styleTween('fill', function(d) {
-          return d3.interpolate(startColor, gridObj.six[4]);
+          return d3.interpolate(startColor, colors.hex[4]);
+        });
+    } else {
+      thisEl.transition().duration(Math.random()*2000)
+        .styleTween('fill', function(d) {
+          return d3.interpolate(startColor, activeGridObj[i]);
         });
     }
-    thisEl.transition().duration(Math.random()*2000)
-      .styleTween('fill', function(d) {
-        return d3.interpolate(startColor, gridObj.six[i]);
-      });
   });
 }
 
