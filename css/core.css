@@ -2,3 +2,220 @@
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 16px;
 }
+a:hover {
+  cursor: pointer !important;
+}
+
+/* hack for getting profile img v-center'd */
+.vcenter {
+  display: inline-block;
+  margin-right: -5px;
+  vertical-align: middle;
+  float: none;
+}
+.vtop {
+  display: inline-block;
+  vertical-align: top;
+  float: none;
+}
+
+/* Layout */
+.cvLink:hover {
+  text-decoration: none;
+}
+.cvLink code {
+  /*['#72e5ef','#245a62']*/
+  background: rgba(114,229,239, 0.25);
+  border: 1px solid rgba(51,128,140, .25);
+  color: rgb(51,128,140);
+}
+.cvLink code:hover {
+  background: rgba(114,229,239, 0.5);
+  border: 1px solid rgba(51,128,140, .5);
+}
+.introBlurb p {
+   text-align: justify;
+   text-justify: newspaper;
+}
+.topBlurb div {
+  margin-bottom: 20px;
+}
+
+/* Research section styling */
+.project {
+  border-bottom: 1px solid rgb(240,240,240);
+  margin-bottom: 15px;
+}
+.projectThumb {
+  border: 4px solid #ddd;
+  height: 100%;
+  width: 100%;
+  max-height: 165px;
+  max-width: 165px;
+  margin: 5px;
+  padding: 1px;
+}
+.research p {
+  text-align: justify;
+  text-justify: newspaper;
+}
+.research h1 {
+  font-weight: bold;
+}
+.research h1.h1-gpa, .research h2.h2-gpa {
+  color: #58b5e1;
+}
+.research h1.h1-bv, .research h2.h2-bv {
+  color: #52dea9;
+}
+.research h1.h1-o, .research h2.h2-o {
+  color: #3588d1;/*116966*/
+}
+.research h2 {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  margin: 0 0 5px 0;
+}
+
+.external {
+  background: rgba(60,70,102,.25);
+  border: 1px solid rgba(60,70,102,.25);
+  border-radius: 3px;
+  color: rgba(60,70,102,1);
+  font-size: 12px;
+  padding: 3px;
+}
+.external::after {
+  content: " Site";
+}
+.external:hover {
+  background: rgba(60,70,102,.5);
+  color: rgba(60,70,102,1);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.github {
+  background: rgba(6,150,104,.25);
+  border: 1px solid rgba(6,150,104,.25);
+  border-radius: 3px;
+  color: rgba(6,150,104,1);
+  font-size: 12px;
+  padding: 3px;
+}
+.github::after {
+  content: " Github";
+}
+.github:hover {
+  background: rgba(6,150,104,.5);
+  color: rgba(6,150,104,1);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.pdf {
+  background: rgba(139,208,235,.25);
+  border: 1px solid rgba(139,208,235,.5);
+  border-radius: 3px;
+  color: rgba(67,101,114,1);
+  font-size: 12px;
+  padding: 3px;
+}
+.pdf::after {
+  content: " PDF";
+}
+.pdf:hover {
+  background: rgba(139,208,235,.5);
+  color: rgba(67,101,114,1);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.researchItem {
+  margin-bottom: 15px;
+}
+
+/* Fun section */
+.dark {
+  background: rgb(51,51,51);
+  padding: 25px 0 75px 0;
+}
+.dark p {
+  color: rgb(200,200,200);
+  text-align: justify;
+  text-justify: newspaper;
+}
+.dark h1, .dark h2 {
+  color: rgb(225,217,54);
+  font-weight: bold;
+}
+.dark h2 {
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0 0 5px 0;
+}
+
+/* map */
+#worldmap {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+#flags {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.flag-wrapper {
+  display: inline-block;
+  height: 35px;
+  margin: 10px;
+  padding:0;
+  width:45px;
+}
+.flag-wrapper span {
+  height: 100%;
+  width: 100%;
+}
+
+#projection-menu {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.stroke {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+.fill {
+  fill: #fff;
+}
+
+
+.latlonlines {
+  fill: none;
+  stroke: #111;
+  stroke-width: .5px;
+  stroke-opacity: .5;
+}
+
+.country {
+  fill: #666;
+  stroke: #333;
+  stroke-width: .5px;
+}
+
+.boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+
+.visited {
+  fill: rgb(225,217,54);
+  stroke: black;
+}
