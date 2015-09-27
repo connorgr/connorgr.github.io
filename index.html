@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
   <!-- Latest compiled and minified bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/core.css">
+
+  <!-- flags from http://lipis.github.io/flag-icon-css/ -->
+  <link rel="stylesheet" href="css/flag-icon.min.css" />
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -14,8 +19,9 @@
       <div class="container">
         <nav role="navigation">
           <ul class="list-inline" style="margin:15px 0;padding:0;font-size:20px;line-height:50px">
-            <li style="padding-left:0px;"><a href="#">About</a></li>
-            <li><a href="research.html">Research</a></li>
+            <li style="margin-right: 35px">Connor C. Gramazio</li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#fun">Fun things</a></li>
           </ul>
         </nav>
       </div>
@@ -25,36 +31,167 @@
 <!-- Start about -->
 <div class="banner" style="padding:15px 0;">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <img src="img/me.png" width="75" height="75" class="visible-xs visible-sm" style="float:left;margin-right:15px;"/>
-        <ul class="list-unstyled" style="padding:15px 0">
-          <li>connor@cs.[myUniversity] edu</li>
-          <li><a href="https://plus.google.com/+ConnorGramazio">Google+</a></li>
-          <li><a href="https://twitter.com/connorgramazio">Twitter</a></li>
-        </ul>
-        <hr />
-      </div>
-    </div>
-
     <!-- start about blurb -->
-    <div class="row" style="padding: 15px 0;">
-      <div class="col-md-6" style="max-height:500px;">
-        <p>I am a PhD candidate and NSF Graduate Research Fellow at <a href="http://www.cs.brown.edu">Brown's computer science department</a>, where I focus on <em>visualization</em> and <em>human-computer interaction</em>, advised by <a href="http://www.cs.brown.edu/~dhl">David Laidlaw</a>.</p>
-
-        <p>I am specializing in genomics visualization and graphical perception.</p>
-
-        <p>I approach visualization research through the lens of a <a href="http://www.cs.unc.edu/~brooks/Toolsmith-CACM.pdf">toolsmith</a>. I find myself at home when collaborating, where I help advance other areas of research while identifying generalizable visualization and HCI contributions.</p>
-
-        <p>To this end, I collaborate with <a href="http://cs.brown.edu/people/faculty/braphael.html">Ben Raphael</a> (cancer genomics) and <a href="http://socrates.berkeley.edu/~plab/karen/">Karen Schloss</a> (perception). I have also collaborated with <a href="http://jeffhuang.com/">Jeff Huang</a> (HCI) on complimentary crowdsourcing research. A listing of my research in PDF form can be found <a href="cv.pdf">here</a>.
-        <p><br /></p>
-        <p>I recently obtained my transitional ScM in computer science from Brown. Before Brown, I was an undergraduate at <a href="http://www.tufts.edu/">Tufts University</a> where I worked with <a href="http://www.cs.tufts.edu/~remco">Remco Chang</a> and <a href="http://people.csail.mit.edu/sarasu/">Sara Su</a>. My undergraduate research ranged from protein structure depiction to exploring data structures in Java heaps. I also minored in (secular) <a href="http://en.wikipedia.org/wiki/Religious_studies">religious studies</a>.</p>
+    <div class="row topBlurb" style="padding: 15px 0;">
+      <div class="col-md-2 vcenter portrait">
+        <img src="img/me.png" class="img-responsive center-block portrait" />
       </div>
-      <div class="col-md-6 hidden-xs hidden-sm" style="background:url(img/me_medium.png) no-repeat right;background-size:85%;height:500px;"></div>
+      <div class="col-md-6 vcenter introBlurb">
+        <p>I'm an NSF graduate research fellow and PhD candidate in the <a href="http://www.cs.brown.edu">Department of Computer Science</a> at Brown University. I'm advised by <a href="http://www.cs.brown.edu/~dhl">David H. Laidlaw</a>, and study how we can improve biological visualization through graphical perception application. I actively collaborate with the <a href="http://compbio.cs.brown.edu/">Raphael Lab</a> and the <a href="https://research.clps.brown.edu/schlosslab/">Visual Perception and Cognition Lab</a>.</p>
+        <p>Curriculum vitae:</span> <a class="pdf fa fa-file-pdf-o" href="cv.pdf"></a></a></p>
+        <!-- <p>Throughout the course of my study, I've collaborated with Dr. <a href="https://cs.brown.edu/people/faculty/braphael.html">Ben Raphael</a>, director of the <a href="http://brown.edu/ccmb">Center for Computational Biology</a>, to build visualization tools for cancer genomics, and with Dr. <a href="http://research.clps.brown.edu/schlosslab/">Karen Schloss</a>, of Brown's <a href="http://www.brown.edu/Departments/CLPS/">Department of Cognitive, Linguistic, &amp; Psychological Sciences</a>, to understand how visualization can be optimized to take advantage of visual perception.</p> -->
+        <!-- <p>Before Brown I had the wonderful opportunity to work with Drs. <a href="http://www.cs.tufts.edu/~remco">Remco Chang</a>, <a href="http://www.cs.tufts.edu/~cowen">Lenore Cowen</a>, <a href="http://www.cs.tufts.edu/~sguyer">Sam Guyer</a>, and <a href="http://people.csail.mit.edu/sarasu/">Sara Su</a> at Tufts University on various topics in data visualization.</p> -->
+      </div>
+      <div class="col-md-4 col-sm-12 vtop">
+        <p><strong>Contact information</strong></p>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-envelope-o" style="margin-right: 4px"></i> connor@cs [myuniversity] edu</li>
+          <li><a href="https://twitter.com/ccgphd"><i class="fa fa-twitter" style="margin-right: 5px"></i> @ccgphd</a></li>
+          <li><a href="https://scholar.google.com/citations?user=9dKovLsAAAAJ&hl=en&oi=ao"><i class="fa fa-graduation-cap"></i> Google Scholar</a></li>
+          <!-- <li>&nbsp;</li>
+          <li style="font-size:14px">Box 1910<br />Computer Science Department<br />Brown University<br />Providence, RI 02912</li> -->
+        </ul>
+      </div>
     </div>
     <hr />
     <!-- end about blurb -->
-    <div class="row" style="padding: 15px 0;">
+  </div>
+  <span id="research"></span>
+  <div class="container research">
+    <!-- Graphical Perception -->
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="h1-gpa">Graphical perception &amp; aesthetics</h1>
+      </div>
+    </div>
+    <div class="row project">
+      <div class="col-md-2">
+        <img src="img/thumb-size.svg" class="projectThumb img-circle" />
+      </div>
+      <div class="col-md-6">
+        <h2 class="h2-gpa">Visualization size and effectiveness</h2>
+        <p>Size is an important design heuristic for visualizations &mdash; after all, there's a balance between total information shown and how easy information is to locate. To better understand this relationship we looked at how data quantity, perceptual grouping, and the size of marks in visualizations affect how quickly and accurately users can search for information. We found that when categories encoded by color are grouped together, search is fast regardless of data quantity and mark size; yet if the data is not grouped, performance quickly degrades as data size increases or mark size decreases.</p>
+      </div>
+      <div class="col-md-4">
+        <p><a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6875989&isnumber=4359476">The relation between visualization size, grouping, and user performance</a>. <strong>C.C. Gramazio</strong>, K.B. Schloss, D.H. Laidlaw. IEEE TVCG/InfoVis 2014.</p>
+        <a class="pdf fa fa-file-pdf-o researchItem" href="papers/gramazio-2012-trb.pdf"></a>
+      </div>
+    </div>
+
+    <div class="row project">
+      <div class="col-md-2">
+        <img src="img/thumb-phyloviz.png" class="projectThumb img-circle" />
+      </div>
+      <div class="col-md-6">
+        <h2 class="h2-gpa">Exploration of visualization design space</h2>
+        <p>To classify existing visualizations, and to better explore visualization design space, we explored visual design patterns in hierarchal visualization techniques by clustering different techniques into a phylogenetic tree. We were able to trace visual relations between different rendering techniques and highlight several as-of-yet undiscovered hierarchal rendering visual styles. Finally, we developed an interactive exploration tool that allows users to weight 12 visualization design features to identify rendering techniques that align with the user's design needs.</p>
+      </div>
+      <div class="col-md-4">
+        <p><a href="http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=2110425">Exploring hierarchical visualization designs using phylogenetic trees</a>. S. Li, R.J. Crouser, G. Griffin, <strong>C.C. Gramazio</strong>, H. Schulz, H. Childs and R. Chang. Visualization and Data Analysis 2015.</p>
+        <a class="pdf fa fa-file-pdf-o researchItem" href="papers/li-2015-ehv.pdf"></a>
+      </div>
+    </div>
+
+    <!-- Biovis -->
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="h1-bv">Biology visualization</h1>
+      </div>
+    </div>
+    <div class="row project">
+      <div class="col-md-2">
+        <img src="img/thumb-magi.svg" class="projectThumb img-circle" />
+      </div>
+      <div class="col-md-6">
+        <h2 class="h2-bv">MAGI</h2>
+        <p>We built MAGI to improve cancer researchers' ability to interactively explore their preliminary data alongside TCGA datasets &mdash; the world's largest public collection of cancer data. Not only does MAGI provide an easily importable, interactive visualization environment, but the tool also allows researchers to add public annotations to TCGA and other public datasets, thus annotating errors or underexamined areas in cancer data.</p>
+      </div>
+      <div class="col-md-4">
+        <p><a href="www.nature.com/articles/nmeth.3412">MAGI: Visualization and Collaborative Annotation of Genomic Aberrations</a>. M.D.M. Leiserson, <strong>C.C. Gramazio</strong>, J. Hu, H. Wu, D.H. Laidlaw, B.J. Raphael. In Nature Methods.</p>
+        <a class="external fa fa-external-link-square researchItem" href="http://magi.brown.edu"></a>
+        <a class="pdf fa fa-file-pdf-o" href="http://www.nature.com/nmeth/journal/v12/n6/full/nmeth.3412.html">Publisher </a>
+        <a class="github fa fa-code-fork researchItem" href="https://github.com/raphael-group/magi"></a>
+      </div>
+    </div>
+    <div class="row project">
+      <div class="col-md-2">
+        <img src="img/thumb-gd3.svg" class="projectThumb img-circle" />
+      </div>
+      <div class="col-md-6">
+        <h2 class="h2-bv">GD3</h2>
+        <p>GD3 is a genomics visualization library meant for visualization novices. The library simplifies the construction of genomics visualizations by requiring less than ten lines of javascript code to create fully-interactive displays. GD3 currently supports six common, genomics-specific visualizations and we are constantly adding more.</p>
+      </div>
+      <div class="col-md-4">
+        <a class="github fa fa-code-fork researchItem" href="https://github.com/raphael-group/gd3"></a>
+      </div>
+    </div>
+    <div class="row project">
+      <div class="col-md-2">
+        <img src="img/thumb-molli.png" class="projectThumb img-circle" />
+      </div>
+      <div class="col-md-6">
+        <h2 class="h2-bv">Molli</h2>
+        <p>Molli is a protein structure visualization tool. Aimed at improving protein rendering quality and speed, the tool uses coordinated multiple views for protein specialists to better compare structural properties across different proteins.</p>
+      </div>
+      <div class="col-md-4">
+        <p><a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6212420">Molli: Interactive Visualization for Exploratory Protein Analysis</a>. S.L. Su, <strong>C. Gramazio</strong>, D. Extrum-Fernandez, C. Crumm, L.J. Cowen, M. Menke, M. Strait. IEEE CG&amp;A, 2012</p>
+        <a class="pdf fa fa-file-pdf-o" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6212420">Publisher</a>
+        <a class="github fa fa-code-fork researchItem" href="https://code.google.com/p/molli"></a>
+      </div>
+    </div>
+
+
+    <!-- Misc. projects -->
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="h1-o">Other research</h1>
+      </div>
+    </div>
+    <div class="row project">
+      <div class="col-md-2">
+        <img src="img/thumb-experimentr.svg" class="projectThumb img-circle" />
+      </div>
+      <div class="col-md-6">
+        <h2 class="h2-o">Crowdsourcing evaluation platform</h2>
+        <p>Professor <a href="http://www.eecs.tufts.edu/~lane/">Lane Harrison</a> started the Experimentr project to provide researchers an easy way to launch complex crowdsourcing experiments. I've helped develop and steer the platform at various points in the development cycle. Built on node.js, Experimentr provides researchers with a stripped down, simple platform to launch Mechanical Turk surveys. Experimentr can support questionaires as well as more complex online experiments such as those that use response time.
+      </div>
+      <div class="col-md-4">
+        <a class="github fa fa-code-fork researchItem" href="https://github.com/codementum/experimentr"></a>
+      </div>
+    </div>
+    <div class="row project">
+      <div class="col-md-2">
+        <img src="img/thumb-faculty.svg" class="projectThumb img-circle" />
+      </div>
+      <div class="col-md-6">
+        <h2 class="h2-o">Crowdsourcing methods</h2>
+        <p>As part of a graduate human-computer interaction seminar lead by Professor <a href="http://jeffhuang.com/">Jeff Huang</a> we researched the efficacy of different crowdsourcing techniques, while simultaneously generating a dataset of 2,200 faculty members in the Top-50 US computer science graduate programs. You can see the results <a href="http://cs.brown.edu/people/alexpap/faculty_dataset.html">here</a>.
+      </div>
+      <div class="col-md-4">
+        <p><a href="http://www.humancomputation.com/2015/#program">Crowdsourcing from Scratch: A Pragmatic Experiment in Data Collection by Novice Requesters</a>. A. Papoutsaki, et al. AAAI HCOMP 2015.</p>
+        <a class="external fa fa-external-link-square researchItem" href="http://cs.brown.edu/people/alexpap/faculty_dataset.html"></a>
+      </div>
+    </div>
+    <div class="row project">
+      <div class="col-md-2">
+        <img src="img/thumb-heapviz.png" class="projectThumb img-circle" />
+      </div>
+      <div class="col-md-6">
+        <h2 class="h2-o">Heapviz</h2>
+        <p>To better understand Java heap structure of programs at runtime we built an exploratory visualization tool for static analysis output.</p>
+      </div>
+      <div class="col-md-4">
+        <p><a href="http://ivi.sagepub.com/content/12/2/163.short">Heapviz: Interactive heap visualization for program understanding and debugging</a>. S. Kelley E.E. Aftandilian, <strong>C. Gramazio</strong>, N. Ricci, S.L. Su, S.Z. Guyer. Sage's Information Visualization (extended)</p>
+        <a class="external fa fa-external-link-square researchItem" href="http://www.cs.tufts.edu/research/redline/heapviz/"></a>
+        <a class="pdf fa fa-file-pdf-o researchItem" href="http://ivi.sagepub.com/content/12/2/163.short">Publisher</a>
+        <a class="github fa fa-code-fork researchItem" href="https://github.com/eaftan/heapviz"></a>
+        <p><a href="http://dl.acm.org/citation.cfm?id=1879222">Heapviz: interactive heap visualization for program understanding and debugging</a> E.E. Aftandilian, S. Kelley, <strong>C. Gramazio</strong>, N. Ricci, S.L. Su, S.Z. Guyer. ACM SoftVis &#8216;10</p>
+        <a class="pdf fa fa-file-pdf-o researchItem" href="papers/aftandilian-2010-hih.pdf"></a>
+      </div>
+    </div>
+
+
+    <!-- <div class="row" style="padding: 15px 0;">
       <div class="col-md-8">
         <h3>Publications</h3>
         <ul class="list-unstyled">
@@ -74,13 +211,47 @@
           <li>de Florez Prize in Human Engineering, &#8216;11</li>
         </ul>
       </div>
-    </div>
-    <hr />
+    </div> -->
   </div>
 </div>
 <!-- End about -->
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div class="dark">
+  <span id="fun"></span>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Fun things</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12"><h2>Travel</h2></div>
+    </div>
+    <div class="row" style="margin-bottom: 20px">
+      <div class="col-md-6">
+        <p>In college I got hooked on learning about and experiencing other cultures. I've been lucky enough to be able to visit and explore these countries first-hand. My favorite way to travel is with nothing more than a backpack (here's a list of <a href="https://docs.google.com/spreadsheets/d/1fbA8GCr57VU93TEGrUOtkI0yC5RJW-_JfZnBj6BGeww/edit?usp=sharing">carry-on travel backpacks</a>). I keep a somewhat-updated collection of photos I've taken during my travels on <a href="https://www.flickr.com/photos/93364639@N07/sets/">Flickr</a>.</p>
+      </div>
+      <div class="col-md-6">
+        <div id="worldmap"></div>
+        <div id="flags"></div>
+      </div>
+    </div>
+    <hr style="border-color: rgb(71,71,71)" />
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Outside of research I...</h2>
+        <p>When I'm not researching I am usually hiking, tasting New England-local beers, or sketching something.</p>
+        <p>Puedo hablar español conversaciónal, pero no soy fluido.</p>
+      </div>
+      <div class="col-md-6">
+        <h2>I used to...</h2>
+        <p>Before starting graduate school I was part of a mostly-<a href="http://en.wikipedia.org/wiki/Ewe_people">Ewe</a>-folk (roughly pronounced "eh-vway") drumming and dance group for four years at Tufts, then directed by Professor <a href="http://naniagbeli.me/">Nani Agbeli</a> (now at CalArts). <!-- I've both drummed and danced pieces like <a href="https://www.youtube.com/watch?v=G03J0FIM0M0">Togo Atsia</a> and <a href="https://www.youtube.com/watch?v=Pz9spMfkjiE">Gahu</a>, as well as a smattering of <a href="http://en.wikipedia.org/wiki/Ga-Adangbe_people">Ga</a> and <a href="http://en.wikipedia.org/wiki/Dagomba_people">Dagbani</a> music like <a href="https://www.youtube.com/watch?v=34-CUCqqafE">Kpanlogo</a> and <a href="https://www.youtube.com/watch?v=aL9kn6_9WHI">Baamaaya</a>. --> I also practiced northern longfist kung fu, tai chi, and qigong for close to 15 years.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
@@ -94,5 +265,13 @@
     ga('require', 'displayfeatures');
     ga('send', 'pageview');
   </script>
+
+  <script src="bower_components/d3/d3.min.js"></script>
+  <script src="bower_components/d3-geo-projection/d3.geo.projection.min.js"></script>
+  <script src="bower_components/topojson/topojson.js"></script>
+
+  <script src="data/worldmap.js"></script>
+  <script src="js/map.js"></script>
+
 </body>
 </html>
