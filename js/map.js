@@ -18,12 +18,14 @@ svg.append("path")
     .attr("d", path);
 
 var visited = [
+  29, // belize
   38, // canada
   50, // costa rica
   66, // spain
   72, // france
   77, // united kingdom
   80, // ghana
+  88, // guatemala
   103, // ireland
   106, // iceland
   163, // netherlands
@@ -57,7 +59,7 @@ svg.append("use")
     .attr("xlink:href", "#sphere");
 
 
-var flagCodes = ['us','ca','ie','gh','cr','is','fr','es','pt','gb', 'pe', 'nl'];
+var flagCodes = ['us','ca','ie','gh','cr','is','fr','es','pt','gb', 'pe', 'nl', 'bz', 'gt'];
 
 var flags = d3.select('#flags').selectAll('.flag-wrapper')
         .data(flagCodes)
