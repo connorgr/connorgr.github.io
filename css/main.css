@@ -1,0 +1,237 @@
+* {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+a, li, p, span {
+  font-size: 16px;
+}
+li, p, span {
+  color: #666c6e;
+}
+a:hover {
+  text-decoration: none;
+}
+body {
+  /*background: rgb(34,45,50);*/ /*dark*/
+  background: #dde3eb;
+  /*color: rgb(205,211,222);*/
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+hr {
+  /*border-top-color: rgb(73,101,104);*/
+  border-top-color: #b4babc;
+}
+
+nav.navbar {
+  background-color: #ebf2f4;
+}
+div#navContainer {
+  margin: 15px;
+}
+div#navContainer ul li:not(:last-child) {
+  margin-right: 25px;
+}
+
+div.bottomContent {
+  /*background: rgb(43,57,64);*/ /* dark */
+  background: #ebf2f4;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  min-height: 100%;
+  padding: 0px 15px 15px 15px;
+}
+
+
+div.topContent {
+  /*background: rgb(38,50,56);*/
+  /*background: rgb(43,57,64);*/
+  background: #ebf2f4;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.25);
+  padding: 15px;
+  width: 700px;
+}
+@media (min-width: 768px) {
+  div.topContent {
+    margin: 0px auto 150px auto;
+  }
+  div.topContentSpacer {
+    height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  div.topContent {
+    margin: 0 0 75px 0;
+    width: 100%;
+  }
+  div.topContentSpacer {
+    height: 0px;
+  }
+}
+
+div.topContentContainer:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  display: block;
+  background-position: top right;
+  background-image: url('../img/waterfall2-lores.jpg');
+  background-size: 100% auto;
+  /*background-image: url('img-here');*/
+  /*background-size:cover;*/
+  width: 100%;
+  height: 100%;
+
+  /*-webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);*/
+
+  opacity: 0.15;
+
+  top: -100px;
+}
+
+div.cardContainer {
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.card {
+  background: #ffffff;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+  border: 1px solid #dddddd;
+  /*display: inline-block;*/
+  margin: 15px;
+  position: relative;
+  /*padding: 15px;*/
+}
+@media (min-width: 768px) {
+  div.card {
+    width: 400px;
+    /*height: 315px;*/
+  }
+}
+@media (max-width: 767px) {
+  div.card {
+    width: 100%;
+    /*height: 425px;*/
+  }
+}
+
+
+div.card hr {
+  border-top-color: #eee;
+  margin-bottom: 10px;
+}
+
+div.card p {
+  padding: 0 15px;
+}
+
+div.card .cardContent {
+  padding-bottom: 45px;
+}
+
+div.card .footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+div.card .header {
+  background: #005fa6;
+  background: -moz-linear-gradient(left, #0073bd 0%, #005fa6 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #0073bd 0%,#005fa6 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #0073bd 0%,#005fa6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border-bottom: 10px solid #0091de;
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  height: 45px;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  padding: 5px 15px 20px 15px;
+  width: 100%;
+}
+
+
+div.card .thumbnail {
+  /*background: #ebf2f4;*/
+  display: inline-block;
+  position: relative;
+  border: none;
+  border-radius: 0;
+  -moz-box-shadow:      0  8px 8px -8px #696868,
+                        0 -8px 8px -8px #696868;
+  -webkit-box-shadow:   0  8px 8px -8px #696868,
+                        0 -8px 8px -8px #696868;
+   box-shadow:          0  8px 8px -8px #696868,
+                        0 -8px 8px -8px #696868;
+  padding: 4px 10px;
+  margin: 15px;
+}
+
+div.card .thumbnail img {
+  object-fit: contain;
+  position: relative;
+  width: 100%;
+}
+
+
+nav {
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.25);
+}
+
+@media (min-width:768px) {
+  ul.nav-resources li {
+    display: inline-block;
+    padding: 4px;
+    margin: 0 8px;
+  }
+  ul.nav-resources li:first-child {
+    margin-left: 0px;
+  }
+  ul.nav-resources li:last-child {
+    margin-right: 0px;
+  }
+
+  ul.nav-resources li i.fa{
+    margin-right: -4px;
+  }
+}
+@media (max-width:767px) {
+  ul.nav-resources li {
+    margin-bottom: 15px;
+  }
+  ul.nav-resources li:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+ul.nav-resources li i.fa{
+  width: 20px;
+}
+
+
+.dark {
+  background: #333;
+}
+
+.dark h1 {
+  color: rgb(225,217,54);
+}
+
+.dark p {
+  color: rgb(200,200,200);
+}

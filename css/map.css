@@ -1,0 +1,63 @@
+/* map */
+#worldmap {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+#flags {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.flag-wrapper {
+  display: inline-block;
+  height: 35px;
+  margin: 10px;
+  padding:0;
+  width:45px;
+}
+.flag-wrapper span {
+  height: 100%;
+  width: 100%;
+}
+
+#projection-menu {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.stroke {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+.fill {
+  fill: #fff;
+}
+
+
+.latlonlines {
+  fill: none;
+  stroke: #111;
+  stroke-width: .5px;
+  stroke-opacity: .5;
+}
+
+.country {
+  fill: #666;
+  stroke: #333;
+  stroke-width: .5px;
+}
+
+.boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+
+.visited {
+  fill: rgb(225,217,54);
+  stroke: black;
+}
