@@ -1,7 +1,7 @@
-var width = 450,
-    height = 225;
+var width = 320,
+    height = 160;
 
-var projection = d3.geo.robinson().scale(70).translate([width/2, height/2]);
+var projection = d3.geo.robinson().scale(50).translate([width/2, height/2]);
 
 var path = d3.geo.path()
     .projection(projection);

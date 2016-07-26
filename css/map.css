@@ -4,6 +4,7 @@
   text-align: center;
   width: 100%;
 }
+
 #flags {
   margin: 0 auto;
   text-align: center;
@@ -47,7 +48,7 @@
 
 .country {
   fill: #666;
-  stroke: #333;
+  stroke: rgba(51,51,51,0.1);
   stroke-width: .5px;
 }
 
@@ -59,5 +60,5 @@
 
 .visited {
   fill: rgb(225,217,54);
-  stroke: black;
+  stroke: rgba(0,0,0,0.1);
 }
