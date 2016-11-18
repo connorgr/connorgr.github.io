@@ -13,16 +13,12 @@
     <link rel="stylesheet" href="css/map.css">
     <link rel="stylesheet" href="css/flag-icon.min.css" />
   </head>
-  <body>
+<body>
 
-<div class="topContentContainer">
-
-<div class="topContentSpacer"></div>
-<div class="topContent">
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-12">
-      <p>Hi, I'm Connor Gramazio.</p>
+<section class="introduction">
+  <h1 class="introduction-item">Hi,<br />I'm Connor Gramazio.</h1>
+  <div class="introduction-item introductionContentContainer">
+    <div class="introductionContent">
       <p>I research data visualization as a computer science PhD canditate
         and a NSF graduate research fellow at Brown University, where I am
         advised by <a href="http://cs.brown.edu/~dhl">David Laidlaw</a>.
@@ -46,269 +42,244 @@
         advised by <a href="http://www.cs.tufts.edu/~remco">Remco Chang</a> and
         <a href="http://people.csail.mit.edu/sarasu/">Sara Su</a>.</p>
       <hr />
-      <ul class="list-unstyled nav-resources">
+
+      <ul class="list-unstyled list-inline">
         <li><i class="fa fa-envelope-o"></i> connor@cs [uni] edu</li>
         <li><a href="https://twitter.com/ccgramazio"><i class="fa fa-twitter"></i> @ccgramazio</a></li>
         <li><a href="https://scholar.google.com/citations?user=9dKovLsAAAAJ&amp;hl=en&amp;oi=ao"><i class="fa fa-graduation-cap"></i> Google Scholar</a></li>
         <li><a href="https://github.com/connorgr"><i class="fa fa-github"></i> Github</a>
-        <!-- <li><a href=""><i class="fa fa-file-pdf-o"></i> C.V.</a> -->
       </ul>
     </div>
   </div>
-</div>
-</div>
-</div>
+</section>
 
-<div class="bottomContent">
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xs-12 cardContainer">
+<section class="projects">
+  <h1>Projects</h1>
 
-      <div class="card">
-        <p class="header">d3-cam02*</p>
-        <div class="thumbnail" >
-          <img src="img/d3-cam02.png"/>
-        </div>
-        <div class="cardContent">
-          <p>d3-cam02 is an extension to <a href="https://d3js.org">D3.js</a> to
-            support CIECAM02 perceptual color space.
-            Supporting perceptual color spaces is critical given that
-            interpolating in non-perceptual spaces like RGB can create
-            perceptually misleading color shifts.
-            My D3.js implementation of CIECAM02 brings one of the most accurate
-            color appearence models to one of the most widely used visualization
-            programming libraries.</p>
-        </div>
-        <div class="footer">
-          <hr />
-          <p>
-            <a href="https://gramaz.io/d3-cam02" class="btn btn-default btn-xs"><i class="fa fa-external-link" style="margin-right: 5px;"></i>Use</a>
-            <a href="https://github.com/connorgr/d3-cam02" class="btn btn-default btn-xs"><i class="fa fa-github-square" style="margin-right: 5px;"></i>Github</a>
-          </p>
-        </div>
-      </div><!-- end card -->
+  <h2>Color, Perception, Design</h2>
+  <div class="cardFlex-container">
 
-      <div class="card">
-        <p class="header">Colorgorical*</p>
-        <div class="thumbnail" >
-          <img src="img/colorgorical.png"/>
-        </div>
-        <div class="cardContent">
-          <p>Colorgorical is a web-based tool for creating information
-            visualization color palettes. Users design palettes by controlling the
-            relative importance of color preference and discriminablity. Color
-            selection can be further customized with hue and lightness filters,
-            and users can also specify palettes to build upon.</p>
-        </div>
-        <div class="footer">
-          <hr />
-          <p>
-            <a href="http://vrl.cs.brown.edu/color" class="btn btn-default btn-xs"><i class="fa fa-external-link" style="margin-right: 5px;"></i>Use</a>
-            <a href="pdf/gramazio-2016-ccd.pdf" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i>PDF</a>
-            <a href="https://github.com/connorgr/colorgorical" class="btn btn-default btn-xs"><i class="fa fa-github-square" style="margin-right: 5px;"></i>Github</a>
-            <span class="pull-right">InfoVis 2016*; TVCG*</span>
-          </p>
-        </div>
-      </div><!-- end card -->
-
-      <div class="card">
-        <p class="header">MAGI</p>
-        <div class="thumbnail" >
-          <img src="img/magi.png"/>
-        </div>
-        <div class="cardContent">
-          <p>MAGI is an online cancer genomics visualization tool, which allows
-          researchers to query sets of genes and renders mutation information
-          across five separate views to support a myriad of analytical tasks.</p>
-        </div>
-        <div class="footer">
-          <hr />
-          <p>
-            <a href="http://magi.brown.edu" class="btn btn-default btn-xs"><i class="fa fa-external-link" style="margin-right: 5px;"></i>Use</a>
-            <a href="http://www.nature.com/nmeth/journal/v12/n6/full/nmeth.3412.html" class="btn btn-default btn-xs"><i class="fa fa-external-link" style="margin-right: 5px;"></i>Paper</a>
-            <a href="https://github.com/raphael-group/magi" class="btn btn-default btn-xs"><i class="fa fa-github-square" style="margin-right: 5px;"></i>Github</a>
-            <span class="pull-right">Nature Methods 2015</span>
-          </p>
-        </div>
-      </div><!-- end card -->
-
-      <div class="card">
-        <p class="header">Visualization search*</p>
-        <div class="thumbnail" >
-          <img src="img/search.svg"/>
-        </div>
-        <div class="cardContent">
-          <p>In this work I tested how the layout, number, and physical size of
-            data affects visualization search performance. Our findings show that
-            perceptual grouping greatly affects performance and that performance
-            gains from increased physical size eventually plateau.</p>
-        </div>
-        <div class="footer">
-          <hr />
-          <p>
-            <a href="pdf/gramazio-2012-trb.pdf" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i>PDF</a>
-            <span class="pull-right">InfoVis 2014*; TVCG*</span>
-          </p>
-        </div>
-      </div><!-- end card -->
-
-      <div class="card">
-        <p class="header">GD3*</p>
-        <div class="thumbnail" >
-          <!-- <img src="img/magi.png"/> -->
-        </div>
-        <div class="cardContent">
-          <p>GD3 is cancer genomics visualization library designed to make
-            it easier to make interactive cancer visualizations.
-            Built on top of D3, GD3 simplifies design by allowing users to
-            declaratively style visualizations with JSONs.
-            More complex stylization (e.g., global color configuration and
-            brushing) is handled through simple dispatch configuration.</p>
-        </div>
-        <div class="footer">
-          <hr />
-          <p>
-            <a href="https://github.com/raphael-group/gd3" class="btn btn-default btn-xs"><i class="fa fa-github-square" style="margin-right: 5px;"></i>Github</a>
-          </p>
-        </div>
-      </div><!-- end card -->
-
-      <div class="card">
-        <p class="header">Crowdsourcing methodology</p>
-        <div class="thumbnail" >
-          <img src="img/crowdsourcingMethods.svg"/>
-        </div>
-        <div class="cardContent">
-          <p>In this study I helped test and categorize novice crowdsourcing
-            requester strategies while also collecting faculty
-            information about the top 50 computer science departments in the USA.</p>
-        </div>
-        <div class="footer">
-          <hr />
-          <p>
-            <a href="pdf/papoutsaki-2015-cfs.pdf" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i>PDF</a>
-            <a href="http://cs.brown.edu/people/alexpap/faculty_dataset.html" class="btn btn-default btn-xs"><i class="fa fa-info-circle" style="margin-right: 5px;"></i>Info</a>
-            <span class="pull-right"><i class="fa fa-trophy"></i>HCOMP 2015</span>
-          </p>
-        </div>
-      </div><!-- end card -->
-
-      <div class="card">
-        <p class="header">Visualization design space</p>
-        <div class="thumbnail" >
-          <img src="img/vizDesign.png"/>
-        </div>
-        <div class="cardContent">
-          <p>In this work I helped code visualizations to construct a
-            phylogenetic classification of the visualization layout design
-            space, helped develop initial prototypes, and helped evaluate the
-            effectiveness of our technique.</p>
-        </div>
-        <div class="footer">
-          <hr />
-          <p>
-            <a href="pdf/li-2015-ehv.pdf" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i>PDF</a>
-            <span class="pull-right"><i class="fa fa-trophy"></i>VDA 2015</span>
-          </p>
-        </div>
-      </div><!-- end card -->
-
-      <div class="card">
-        <p class="header">Heapviz</p>
-        <div class="thumbnail" >
-          <img src="img/heapviz.png"/>
-        </div>
-        <div class="cardContent">
-          <p>Heapviz is a visualization tool to explore snapshots of the Java
-            heap captured during runtime. I helped create the visualization
-            interface, which shows simplified Java heap information so that
-            otherwise sprawling Java heaps are simplified so that data
-            structures are recognizable.
-          </p>
-        </div>
-        <div class="footer">
-          <hr />
-          <p>
-            <a href="pdf/aftandilian-2010-hih.pdf" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i>PDF</a>
-            <a href="http://www.cs.tufts.edu/research/redline/heapviz/" class="btn btn-default btn-xs"><i class="fa fa-info-circle" style="margin-right: 5px;"></i>Info</a>
-            <span class="pull-right">SoftVis 2010; Sage's InfoVis</span>
-          </p>
-        </div>
-      </div><!-- end card -->
-
-      <div class="card">
-        <p class="header">Molli / TuftsViewer</p>
-        <div class="thumbnail" >
-          <img src="img/molli.png"/>
-        </div>
-        <div class="cardContent">
-          <p>Molli is a protein visualization tool that was built to support
-            comparative structural analysis. In addition to rendering 3D
-            structure, Molli also shows aligned sequences and
-            residue information for each of the displayed proteins.</p>
-        </div>
-        <div class="footer">
-          <hr />
-          <p>
-            <a href="http://dx.doi.org/10.1109/MCG.2012.66" class="btn btn-default btn-xs"><i class="fa fa-external-link" style="margin-right: 5px;"></i>Paper</a>
-            <a href="https://code.google.com/archive/p/molli/" class="btn btn-default btn-xs"><i class="fa fa-file-code-o" style="margin-right: 5px;"></i>Google Code</a>
-            <span class="pull-right">CG&amp;A 2012</span>
-          </p>
-        </div>
-      </div><!-- end card -->
-
+  <div class="cardFlex-item">
+    <div class="card">
+      <p class="header">d3-cam02</p>
+      <figure><img src="img/d3-cam02.svg"></figure>
+      <p class="content">
+        d3-cam02 is an extension to <a href="https://d3js.org">D3.js</a> to
+        support CIECAM02 perceptual color space, which is a modern successor to
+        CIELAB.
+        Supporting perceptual color spaces is critical given that
+        interpolating in non-perceptual spaces like RGB can create
+        perceptually misleading color shifts.
+      </p>
+      <p class="footer">
+        <a href="https://gramaz.io/d3-cam02" class="btn btn-default btn-xs"><i class="fa fa-external-link" style="margin-right: 5px;"></i>Use</a>
+        <a href="https://github.com/connorgr/d3-cam02" class="btn btn-default btn-xs"><i class="fa fa-github-square" style="margin-right: 5px;"></i>Github</a>
+      </p>
     </div>
   </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <p>*: first-author publication</p>
+
+  <div class="cardFlex-item">
+    <div class="card">
+      <p class="header">Colorgorical</p>
+      <figure><img src="img/colorgorical.png"></figure>
+      <p class="content">
+        Colorgorical is a web-based tool for creating information
+        visualization color palettes. Users design palettes by controlling the
+        relative importance of color preference and discriminablity. Color
+        selection can be further customized with hue and lightness filters,
+        and users can also specify palettes to build upon.
+      </p>
+      <p class="footer">
+        <a href="http://vrl.cs.brown.edu/color" class="btn btn-default btn-xs"><i class="fa fa-external-link" style="margin-right: 5px;"></i>Use</a>
+        <a href="pdf/gramazio-2016-ccd.pdf" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i>PDF</a>
+        <a href="https://github.com/connorgr/colorgorical" class="btn btn-default btn-xs"><i class="fa fa-github-square" style="margin-right: 5px;"></i>Github</a>
+        <span class="pull-right">InfoVis 2016; TVCG</span>
+      </p>
     </div>
   </div>
-</div><!-- end container-fluid -->
-</div><!-- end container-fluid -->
 
-<div class="container-fluid dark">
-  <div class="row">
-    <div class="col-md-6">
-      <h1>Fun things</h1>
-      <p>In college I got hooked on learning about and experiencing other
-        cultures. Since then, I've been lucky enough to be able to visit and
-        explore several countries first-hand.</p>
-
-      <p>I love spending time outdoors, and enjoy backpacking/hiking, scuba
-        diving, swimming, and biking.</p>
-
-      <p>My favorite way to travel is with nothing more than a backpack
-        (here's a list of <a href="https://docs.google.com/spreadsheets/d/1fbA8GCr57VU93TEGrUOtkI0yC5RJW-_JfZnBj6BGeww/edit?usp=sharing">carry-on travel backpacks</a>).</p>
-    </div>
-    <div class="col-md-6" style="margin-top: 50px;">
-      <div id="worldmap"></div>
-      <div id="flags"></div>
+  <div class="cardFlex-item">
+    <div class="card">
+      <p class="header">Visualization search</p>
+      <figure><img src="img/search.svg"></figure>
+      <p class="content">
+        In this work I tested how the layout, number, and physical size of
+        data affects visualization search performance. Our findings show that
+        perceptual grouping greatly affects performance and that performance
+        gains from increased physical size eventually plateau.
+      </p>
+      <p class="footer">
+        <a href="pdf/gramazio-2012-trb.pdf" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i>PDF</a>
+        <span class="pull-right">InfoVis 2014*; TVCG*</span>
+      </p>
     </div>
   </div>
-</div>
 
-</div>
+  <div class="cardFlex-item">
+    <div class="card">
+      <p class="header">Exploring visualization design spaces</p>
+      <figure><img src="img/vizDesign.png"></figure>
+      <p class="content">
+        In this work I helped code visualizations to construct a
+          phylogenetic classification of the visualization layout design
+          space, helped develop initial prototypes, and helped evaluate the
+          effectiveness of our technique.
+      </p>
+      <p class="footer">
+        <a href="pdf/li-2015-ehv.pdf" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i>PDF</a>
+        <span class="pull-right"><i class="fa fa-trophy"></i>VDA 2015</span>
+      </p>
+    </div>
+  </div>
 
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  </div><!-- end cardFlex-container -->
 
-    ga('create', 'UA-46059414-1', 'auto');
-    ga('send', 'pageview');
+  <h2>Biology Visualization</h2>
+  <div class="cardFlex-container">
 
-    </script>
+  <div class="cardFlex-item">
+    <div class="card">
+      <p class="header">MAGI</p>
+      <figure><img src="img/magi.png"></figure>
+      <p class="content">
+        MAGI is an online cancer genomics visualization tool, which allows
+        researchers to query sets of genes and renders mutation information
+        across five separate views to support a myriad of analytical tasks.
+      </p>
+      <p class="footer">
+        <a href="http://magi.brown.edu" class="btn btn-default btn-xs"><i class="fa fa-external-link" style="margin-right: 5px;"></i>Use</a>
+        <a href="http://www.nature.com/nmeth/journal/v12/n6/full/nmeth.3412.html" class="btn btn-default btn-xs"><i class="fa fa-external-link" style="margin-right: 5px;"></i>Paper</a>
+        <a href="https://github.com/raphael-group/magi" class="btn btn-default btn-xs"><i class="fa fa-github-square" style="margin-right: 5px;"></i>Github</a>
+        <span class="pull-right">Nature Methods 2015</span>
+      </p>
+    </div>
+  </div>
 
-    <script src="js/d3.min.js"></script>
-    <script src="js/d3.geo.projection.min.js"></script>
-    <script src="js/topojson.js"></script>
+  <div class="cardFlex-item">
+    <div class="card">
+      <p class="header">GD3</p>
+      <p class="content">
+        GD3 is cancer genomics visualization library designed to make
+          it easier to make interactive cancer visualizations.
+          Built on top of D3, GD3 simplifies design by allowing users to
+          declaratively style visualizations with JSONs.
+          More complex stylization (e.g., global color configuration and
+          brushing) is handled through simple dispatch configuration
+      </p>
+      <p class="footer">
+        <a href="https://github.com/raphael-group/gd3" class="btn btn-default btn-xs"><i class="fa fa-github-square" style="margin-right: 5px;"></i>Github</a>
+      </p>
+    </div>
+  </div>
 
-    <script src="js/worldmap.js"></script>
-    <script src="js/map.js"></script>
+  <div class="cardFlex-item">
+    <div class="card">
+      <p class="header">Molli / TuftsViewer</p>
+      <figure><img src="img/molli.png"></figure>
+      <p class="content">
+        Molli is a protein visualization tool that was built to support
+          comparative structural analysis. In addition to rendering 3D
+          structure, Molli also shows aligned sequences and
+          residue information for each of the displayed proteins
+      </p>
+      <p class="footer">
+        <a href="http://dx.doi.org/10.1109/MCG.2012.66" class="btn btn-default btn-xs"><i class="fa fa-external-link" style="margin-right: 5px;"></i>Paper</a>
+        <a href="https://code.google.com/archive/p/molli/" class="btn btn-default btn-xs"><i class="fa fa-file-code-o" style="margin-right: 5px;"></i>Google Code</a>
+        <span class="pull-right">CG&amp;A 2012</span>
+      </p>
+    </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"   integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="   crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  </body>
+  </div><!-- end cardFlex-container -->
+
+  <h2>Miscellanea</h2>
+  <div class="cardFlex-container">
+
+  <div class="cardFlex-item">
+    <div class="card">
+      <p class="header">Crowdsourcing methodology</p>
+      <figure><img src="img/crowdsourcingMethods.svg"></figure>
+      <p class="content">
+        In this study I helped test and categorize novice crowdsourcing
+          requester strategies while also collecting faculty
+          information about the top 50 computer science departments in the USA.
+      </p>
+      <p class="footer">
+        <a href="pdf/papoutsaki-2015-cfs.pdf" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i>PDF</a>
+        <a href="http://cs.brown.edu/people/alexpap/faculty_dataset.html" class="btn btn-default btn-xs"><i class="fa fa-info-circle" style="margin-right: 5px;"></i>Info</a>
+        <span class="pull-right"><i class="fa fa-trophy"></i>HCOMP 2015</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="cardFlex-item">
+    <div class="card">
+      <p class="header">Heapviz</p>
+      <figure><img src="img/heapviz.png"></figure>
+      <p class="content">
+        Heapviz is a visualization tool to explore snapshots of the Java
+        heap captured during runtime. I helped create the visualization
+        interface, which shows simplified Java heap information so that
+        otherwise sprawling Java heaps are simplified so that data
+        structures are recognizable.
+      </p>
+      <p class="footer">
+        <a href="pdf/aftandilian-2010-hih.pdf" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i>PDF</a>
+        <a href="http://www.cs.tufts.edu/research/redline/heapviz/" class="btn btn-default btn-xs"><i class="fa fa-info-circle" style="margin-right: 5px;"></i>Info</a>
+        <span class="pull-right">SoftVis 2010; Sage's InfoVis</span>
+      </p>
+    </div>
+  </div>
+
+  </div> <!-- end cardFlex-container -->
+</section> <!-- end projects section -->
+
+<section class="aboutMe">
+  <h1>About me</h1>
+  <div class="aboutMe-item aboutMe-description">
+    <p>I’m currently a computer science PhD candidate and NSF graduate research
+        fellow at Brown University.</p>
+    <p>Before, I graduated from Tufts with a B.S. in computer
+        science. I also minored in religion and drummed, danced, and sang
+        in Kiniwe – Tufts’ Ghanaian performance ensemble – for four years,
+        which was then directed by Professors Nani Agbeli (now at CalArt) and
+        David Locke.</p>
+    <p>In college I got hooked on learning about and experiencing other
+      cultures. Since then, I've been lucky enough to be able to visit and
+      explore several countries first-hand. My favorite way to travel is with
+      nothing more than a carry-on backpack.</p>
+  </div>
+
+  <div class="aboutMe-item">
+    <div id="worldmap"></div>
+    <div id="flags"></div>
+  </div>
+
+  <hr>
+  <div class="aboutMe-item">
+    <ul class="list-unstyled list-inline">
+      <li><i class="fa fa-envelope-o"></i> connor@cs [uni] edu</li>
+      <li><a href="https://twitter.com/ccgramazio"><i class="fa fa-twitter"></i> @ccgramazio</a></li>
+      <li><a href="https://scholar.google.com/citations?user=9dKovLsAAAAJ&amp;hl=en&amp;oi=ao"><i class="fa fa-graduation-cap"></i> Google Scholar</a></li>
+      <li><a href="https://github.com/connorgr"><i class="fa fa-github"></i> Github</a>
+    </ul>
+  </div>
+</section>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-46059414-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script src="js/d3.min.js"></script>
+<script src="js/d3.geo.projection.min.js"></script>
+<script src="js/topojson.js"></script>
+
+<script src="js/worldmap.js"></script>
+<script src="js/map.js"></script>
+
+</body>
 </html>
