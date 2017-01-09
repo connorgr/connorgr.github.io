@@ -253,3 +253,33 @@ a:hover { color: #085093; text-decoration: underline; }
   .aboutMe-description { margin-left: 0; }
   .aboutMe-description::before { display: none; }
 }
+
+
+/* map */
+#worldmap {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+#worldmap img {
+  max-width: 834px;
+  width: 100%;
+}
+
+#flags {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.flag-wrapper {
+  display: inline-block;
+  height: 35px;
+  margin: 10px;
+  padding:0;
+  width:45px;
+}
+.flag-wrapper span {
+  height: 100%;
+  width: 100%;
+}

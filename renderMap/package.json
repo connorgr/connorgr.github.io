@@ -1,0 +1,23 @@
+{
+  "name": "gramazio-map",
+  "version": "0.1.0",
+  "description": "headless map renderer of visted countries",
+  "keywords": [],
+  "homepage": "http://gramaz.io",
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Connor Gramazio",
+    "url": "http://gramaz.io"
+  },
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "render": "node index.js"
+  },
+  "dependencies": {
+    "d3": "^4.4.0",
+    "d3-geo-projection": "^1.2.1",
+    "jsdom": "^9.9.1",
+    "topojson": "^2.2.0"
+  }
+}

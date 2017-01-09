@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/map.css">
     <link rel="stylesheet" href="css/flag-icon.css" />
   </head>
 <body>
@@ -281,8 +280,26 @@
   </div>
 
   <div class="aboutMe-item">
-    <div id="worldmap"></div>
-    <div id="flags"></div>
+    <div id="worldmap">
+      <img src="img/map.png" />
+    </div>
+      <div id="flags">
+        <div class="flag-wrapper"><span class="flag-icon flag-icon-us"></span></div>
+        <div class="flag-wrapper"><span class="flag-icon flag-icon-ca"></span></div>
+        <div class="flag-wrapper"><span class="flag-icon flag-icon-ie"></span></div>
+        <div class="flag-wrapper"><span class="flag-icon flag-icon-gh"></span></div>
+        <div class="flag-wrapper"><span class="flag-icon flag-icon-cr"></span></div>
+        <div class="flag-wrapper"><span class="flag-icon flag-icon-is"></span></div>
+        <div class="flag-wrapper"><span class="flag-icon flag-icon-fr"></span></div>
+        <div class="flag-wrapper"><span class="flag-icon flag-icon-es"></span></div>
+        <div class="flag-wrapper"><span class="flag-icon flag-icon-pt"></span></div>
+        <div class="flag-wrapper"><span class="flag-icon flag-icon-gb"></span></div>
+        <div class="flag-wrapper"><span class="flag-icon flag-icon-pe"></span></div>
+        <div class="flag-wrapper"><span class="flag-icon flag-icon-nl"></span></div>
+        <div class="flag-wrapper"><span class="flag-icon flag-icon-bz"></span></div>
+        <div class="flag-wrapper"><span class="flag-icon flag-icon-gt"></span></div>
+        <div class="flag-wrapper"><span class="flag-icon flag-icon-it"></span></div>
+    </div>
   </div>
 
   <hr>
@@ -304,12 +321,5 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-46059414-1', 'auto');
 ga('send', 'pageview');
 </script>
-<script src="js/d3.min.js"></script>
-<script src="js/d3.geo.projection.min.js"></script>
-<script src="js/topojson.js"></script>
-
-<script src="js/worldmap.js"></script>
-<script src="js/map.js"></script>
-
 </body>
 </html>
