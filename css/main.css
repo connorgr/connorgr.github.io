@@ -27,7 +27,11 @@ a:hover { color: #085093; text-decoration: underline; }
 |**************************/
 /* section: introduction */
 .introduction {
-  background-image: radial-gradient(ellipse farthest-corner at 45px 45px , #999 0%, rgba(0, 0, 255, 0) 50%, #000 95%);
+  background: #ccc;
+  background: radial-gradient(ellipse farthest-corner at 45px 45px , #eee 0%, rgba(255, 255, 255, 0.5) 50%, #fff 95%);
+  background: -moz-radial-gradient(ellipse farthest-corner at 45px 45px , #eee 0%, rgba(255, 255, 255, 0.5) 50%, #fff 95%);
+  background: -webkit-radial-gradient(ellipse farthest-corner at 45px 45px , #eee 0%, rgba(255, 255, 255, 0.5) 50%, #fff 95%);
+
   background-attachment: fixed;
   margin: 0px;
   min-height: 95vh;
