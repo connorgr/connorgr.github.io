@@ -1,0 +1,27 @@
+@import "color.scss";
+
+.resume_container {
+}
+.resume_item {
+  display: inline-block;
+  min-width: 300px;
+  vertical-align: top;
+}
+
+.resume_pdfBlock {
+  background: #eee;
+  display: block;
+  margin-bottom: 15px;
+  padding: 10px 0;
+}
+
+.resume_pubList {
+  list-style: none;
+  padding: 0;
+}
+.resume_pubList li {
+  margin: 5px 0 0 0;
+}
+.resume_pubList li a {
+  text-decoration: underline;
+}

@@ -1,0 +1,46 @@
+@import "color.scss";
+@import "sizes.scss";
+
+* {
+  color: $offblack;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+html, body { background: $offblack; margin: 0px; padding: 0px; }
+section { background: #fff; margin: 0; padding: $nav_totalHeight*2 30px 15px 30px; }
+
+h1, h2, h3, h4, h5 { font-weight: normal; }
+a { color: #0a66bc; text-decoration: none; }
+a:hover { color: #085093; text-decoration: underline; }
+
+figure { margin: 0; padding: 0; }
+
+.list-inline {
+  text-align: center;
+}
+.list-inline li {
+  display: inline-block;
+  margin: 0 15px 15px 0;
+}
+.list-inline li:last-child {
+  margin-right: none;
+}
+
+.list-unstyled, .list-unstyled li {
+  list-style:none;
+  margin: 0;
+  padding: 0;
+}
+
+.circleCrop { border-radius: 50%; }
+
+.fancyH1 {
+  border-bottom: 1px solid #ccc;
+  border-top: 10px solid $offblack;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding: 10px 0;
+}
+
+.underline {
+  text-decoration: underline;
+}

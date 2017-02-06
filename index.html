@@ -4,43 +4,49 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Connor Gramazio</title>
-    <meta name="description" content="">
+    <meta name="description" content="Online portfolio of Connor Gramazio.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/flag-icon.css" />
+
+    <link rel="icon" href="img/favicon/favicon.ico" type="image/png" sizes="16x16 128x128">
   </head>
 <body>
 
-<section class="introduction">
-  <h1 class="introduction-item">Hi,<br />I'm Connor Gramazio.</h1>
+<nav class="navbar-fixed-top">
+  <span class="name hamburgerHide">gramaz.io:</span>
+  <a href="#about">&lt; about &gt;</a>
+  <a href="#projects">&lt; projects &gt;</a>
+  <a href="#resume">&lt; resume &gt;</a>
+  <a href="#fun">&lt; fun &gt;</a>
+</nav>
+
+<section class="introduction" id="about">
+  <h1 class="introduction-item">
+    <img src="img/windyScotland.jpg" width="150px" height="150px" class="circleCrop portrait" />
+    <span class="introduction_header">Hi,<br />I'm Connor Gramazio.</span>
+  </h1>
   <div class="introduction-item introductionContentContainer">
     <div class="introductionContent">
       <p>I research data visualization as a computer science PhD canditate
         and a National Science Foundation graduate research fellow at Brown
         University, where I am
         advised by <a href="http://cs.brown.edu/~dhl">David Laidlaw</a>.
-        My dissertation committee members are
-        <a href="http://jeffhuang.com/">Jeff Huang</a>,
-        <a href="http://compbio.cs.brown.edu/">Ben Raphael</a>,
-        and
-        <a href="http://research.clps.brown.edu/schlosslab/">Karen Schloss</a>.
       </p>
 
-      <p>My research focuses on human-centered visualization design.
-        Specifically, my thesis expands our understanding of effective
-        design practices and provides new computational techniques to improve
-        visualization stylization and user behavior classification by
-        working in cancer genomics application areas.
-      </p>
+      <p>My dissertation provides new computational design techniques
+        and usability guidelines to empower both the creators and users of
+        visualization tools.</p>
 
-      <p>I'm currently looking for industry jobs starting post-academic year.</p>
+      <p><span style="text-decoration: underline">I'm currently looking for
+        full-stack or data-related industry jobs</span>
+        starting post-academic year. Feel free to reach out!</p>
 
       <p><strong>Update:</strong> I'm incredibly excited to announce that I will
-        be speaking about effective visualization design practices at this year's
-        <a href="https://openvisconf.com">OpenVisConf</a>.</p>
+        be speaking about effective visualization design practices at this
+        year's <a href="https://openvisconf.com">OpenVisConf</a>.</p>
 
       <p>Before starting at Brown I graduated from Tufts University, where I was
         advised by <a href="http://www.cs.tufts.edu/~remco">Remco Chang</a> and
@@ -57,103 +63,184 @@
   </div>
 </section>
 
-<section class="projects">
-  <h1>Projects</h1>
+<section class="projects" id="projects">
+  <h1 class="fancyH1">Projects</h1>
 
-  <h2>Color, Perception, Design</h2>
+  <h2>Computational Design</h2>
   <div class="cardFlex-container">
 
   <div class="cardFlex-item">
     <div class="card">
-      <p class="header">d3-cam02</p>
-      <figure><img src="img/d3-cam02.svg"></figure>
-      <p class="content">
-        d3-cam02 is an extension to <a href="https://d3js.org">D3.js</a> to
-        support CIECAM02 perceptual color space, which is a modern successor to
-        CIELAB.
-        Supporting perceptual color spaces is critical given that
-        interpolating in non-perceptual spaces like RGB can create
-        perceptually misleading color shifts.
-      </p>
-      <p class="footer">
-        <a href="https://gramaz.io/d3-cam02" class="btn btn-default btn-xs"><i class="fa fa-external-link" style="margin-right: 5px;"></i>Use</a>
-        <a href="https://github.com/connorgr/d3-cam02" class="btn btn-default btn-xs"><i class="fa fa-github-square" style="margin-right: 5px;"></i>Github</a>
-      </p>
+      <figure><img src="img/projects/colorgorical-fs8.png"></figure>
+      <div class="body">
+        <p class="header">Colorgorical</p>
+        <p class="content">
+          Colorgorical is a tool to make categorical visualization color
+          palette design easier, given the frequent difficulties that arise
+          when trying to balance aesthetics with legibility constraints.
+          Large-scale evaluations show that palettes automatically made by
+          Colorgorical are as discriminable and are typically more
+          preferable compared to the defaults included in ColorBrewer,
+          Microsoft, and Tableau.
+          <a href="http://vrl.cs.brown.edu/color">(use)</a>
+          <a href="pdf/gramazio-2016-ccd.pdf">(paper)</a>
+          <a href="https://github.com/connorgr/colorgorical">(source)</a>
+        </p>
+        <p class="footer">
+          <i class="skillBadge badgeDev">full stack</i>
+          <i class="skillBadge badgeDev">Javascript</i>
+          <i class="skillBadge badgeDev">Python</i>
+          <i class="skillBadge badgeDev">C</i>
+          <i class="skillBadge badgeTech">NumPy</i>
+          <i class="skillBadge badgeTech">D3.js</i>
+          <i class="skillBadge badgeEval">R</i>
+          <i class="skillBadge badgeEval">linear regression</i>
+          <i class="skillBadge badgeEval">quantitative</i>
+        </p>
+      </div>
     </div>
   </div>
 
   <div class="cardFlex-item">
     <div class="card">
-      <p class="header">d3-jnd</p>
-      <figure><img src="img/d3-jnd.svg"></figure>
-      <p class="content">
-        d3-jnd is an extension to <a href="https://d3js.org">D3.js</a>, which
-        allows programmers to quickly check whether two colors can be easily
-        differentiated. Further, user-defined parameters allow programmers to
-        define how conservative they want color differentiability predictions to
-        be.
-      </p>
-      <p class="footer">
-        <a href="https://gramaz.io/d3-jnd" class="btn btn-default btn-xs"><i class="fa fa-external-link" style="margin-right: 5px;"></i>Use</a>
-        <a href="https://github.com/connorgr/d3-jnd" class="btn btn-default btn-xs"><i class="fa fa-github-square" style="margin-right: 5px;"></i>Github</a>
-      </p>
+      <figure><img src="img/projects/d3-cam02.min.svg"></figure>
+      <div class="body">
+        <p class="header">d3-cam02</p>
+        <p class="content">
+          d3-cam02 is a <a href="https://d3js.org">D3.js</a> module that
+          defines CIECAM02 and CIECAM02-UCS color spaces.
+          CIECAM02 and CIECAM02-UCS are two of the most perceptually accurate
+          color spaces, which is particularly important for visualization design
+          given that perceptual color differences often encode meaning.
+          <a href="https://gramaz.io/d3-cam02">(use)</a>
+          <a href="https://github.com/connorgr/d3-cam02">(source)</a>
+        </p>
+        <p class="footer">
+          <i class="skillBadge badgeDev">Javascript</i>
+          <i class="skillBadge badgeTech">D3.js</i>
+        </p>
+      </div>
     </div>
   </div>
 
   <div class="cardFlex-item">
     <div class="card">
-      <p class="header">Colorgorical</p>
-      <figure><img src="img/colorgorical.png"></figure>
-      <p class="content">
-        Colorgorical is a web-based tool for creating information
-        visualization color palettes. Users design palettes by controlling the
-        relative importance of color preference and discriminablity. Color
-        selection can be further customized with hue and lightness filters,
-        and users can also specify palettes to build upon.
-      </p>
-      <p class="footer">
-        <a href="http://vrl.cs.brown.edu/color" class="btn btn-default btn-xs"><i class="fa fa-external-link" style="margin-right: 5px;"></i>Use</a>
-        <a href="pdf/gramazio-2016-ccd.pdf" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i>PDF</a>
-        <a href="https://github.com/connorgr/colorgorical" class="btn btn-default btn-xs"><i class="fa fa-github-square" style="margin-right: 5px;"></i>Github</a>
-        <span class="pull-right">InfoVis 2016; TVCG</span>
-      </p>
+      <figure><img src="img/projects/d3-jnd.min.svg"></figure>
+      <div class="body">
+        <p class="header">d3-jnd</p>
+        <p class="content">
+          d3-jnd is a <a href="https://d3js.org">D3.js</a> module that allows
+          designers to quickly check whether two colors can be easily
+          differentiated, and considers how color discriminability can shift
+          with changes in size.
+          <a href="https://gramaz.io/d3-jnd">(use)</a>
+          <a href="https://github.com/connorgr/d3-jnd">(source)</a>
+        </p>
+        <p class="footer">
+          <i class="skillBadge badgeDev">Javascript</i>
+          <i class="skillBadge badgeTech">D3.js</i>
+        </p>
+      </div>
     </div>
   </div>
 
   <div class="cardFlex-item">
     <div class="card">
-      <p class="header">Visualization search</p>
-      <figure><img src="img/search.svg"></figure>
-      <p class="content">
-        In this work I tested how the layout, number, and physical size of
-        data affects visualization search performance. Our findings show that
-        perceptual grouping greatly affects performance and that performance
-        gains from increased physical size eventually plateau.
-      </p>
-      <p class="footer">
-        <a href="pdf/gramazio-2012-trb.pdf" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i>PDF</a>
-        <span class="pull-right">InfoVis 2014*; TVCG*</span>
-      </p>
+      <figure><img src="img/projects/vizDesign-fs8.png"></figure>
+      <div class="body">
+        <p class="header">Exploring visualization design spaces</p>
+        <p class="content">
+          I created a collection of hierarchal visualization annotations and
+          developed a prototype to explore the design space for phylogenetic
+          design classification results.
+          <a href="pdf/li-2015-ehv.pdf">(paper)</a>
+        </p>
+        <p class="footer">
+          <i class="skillBadge badgeDev">Java</i>
+          <i class="skillBadge badgeEval">qualitative</i>
+        </p>
+      </div>
     </div>
   </div>
 
-  <div class="cardFlex-item">
-    <div class="card">
-      <p class="header">Exploring visualization design spaces</p>
-      <figure><img src="img/vizDesign.png"></figure>
-      <p class="content">
-        In this work I helped code visualizations to construct a
-          phylogenetic classification of the visualization layout design
-          space, helped develop initial prototypes, and helped evaluate the
-          effectiveness of our technique.
-      </p>
-      <p class="footer">
-        <a href="pdf/li-2015-ehv.pdf" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i>PDF</a>
-        <span class="pull-right"><i class="fa fa-trophy"></i>VDA 2015</span>
-      </p>
-    </div>
-  </div>
+  </div><!-- end cardFlex-container -->
 
+  <h2>Usability Evaluation</h2>
+  <div class="cardFlex-container">
+
+    <div class="cardFlex-item">
+      <div class="card">
+        <figure><img src="img/projects/interactionLog-fs8.png"></figure>
+        <div class="body">
+          <p class="header">Classifying interaction behavior</p>
+          <p class="content">
+            I designed a new feature set based on recent eyetracking advances to
+            classify visualization interaction behavior by mining
+            anonymized cancer visual analysis mouse interaction logs.
+            (under review)
+          </p>
+          <p class="footer">
+            <i class="skillBadge badgeDev">Python</i>
+            <i class="skillBadge badgeDev">Javascript</i>
+            <i class="skillBadge badgeTech">scikit-learn</i>
+            <i class="skillBadge badgeTech">D3.js</i>
+            <i class="skillBadge badgeTech">MongoDB</i>
+            <i class="skillBadge badgeEval">R</i>
+            <i class="skillBadge badgeEval">classification</i>
+            <i class="skillBadge badgeEval">inter-rater reliability</i>
+            <i class="skillBadge badgeEval">quantitative</i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cardFlex-item">
+      <div class="card">
+        <figure><img src="img/projects/brain-organic.min.svg"></figure>
+        <!-- Attrib: https://openclipart.org/detail/268086/brain-organic -->
+        <div class="body">
+          <p class="header">Usability requirements for cancer genomics visualization</p>
+          <p class="content">
+            I performed a contextual inquiry to synthesize four common cancer
+            genomics task requirements and then evaluated whether MAGI's interface
+            supported these needs. My analysis focused on including the full
+            diaspora of research subdisciplines to define and evaluate
+            usability. (under review)
+          </p>
+          <p class="footer">
+            <i class="skillBadge badgeEval">requirements analysis</i>
+            <i class="skillBadge badgeEval">contextual inquiry</i>
+            <i class="skillBadge badgeEval">qualitative</i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cardFlex-item">
+      <div class="card">
+        <figure><img src="img/projects/search.min.svg"></figure>
+        <div class="body">
+          <p class="header">Visualization search</p>
+          <p class="content">
+            I performed a series of quantitative evaluations to identify design
+            practices based on how the
+            layout, number, and physical size of data affects visualization search
+            performance.
+            <a href="pdf/gramazio-2012-trb.pdf">(paper)</a>
+          </p>
+          <p class="footer">
+            <i class="skillBadge badgeDev">Javascript</i>
+            <i class="skillBadge badgeTech">D3.js</i>
+            <i class="skillBadge badgeTech">node.js</i>
+            <i class="skillBadge badgeEval">R</i>
+            <i class="skillBadge badgeEval">linear regression</i>
+            <i class="skillBadge badgeEval">ANOVA</i>
+            <i class="skillBadge badgeEval">NASA TLX</i>
+            <i class="skillBadge badgeEval">quantitative</i>
+          </p>
+        </div>
+      </div>
+    </div>
   </div><!-- end cardFlex-container -->
 
   <h2>Biology Visualization</h2>
@@ -161,54 +248,64 @@
 
   <div class="cardFlex-item">
     <div class="card">
-      <p class="header">MAGI</p>
-      <figure><img src="img/magi.png"></figure>
-      <p class="content">
-        MAGI is an online cancer genomics visualization tool, which allows
-        researchers to query sets of genes and renders mutation information
-        across five separate views to support a myriad of analytical tasks.
-      </p>
-      <p class="footer">
-        <a href="http://magi.brown.edu" class="btn btn-default btn-xs"><i class="fa fa-external-link" style="margin-right: 5px;"></i>Use</a>
-        <a href="http://www.nature.com/nmeth/journal/v12/n6/full/nmeth.3412.html" class="btn btn-default btn-xs"><i class="fa fa-external-link" style="margin-right: 5px;"></i>Paper</a>
-        <a href="https://github.com/raphael-group/magi" class="btn btn-default btn-xs"><i class="fa fa-github-square" style="margin-right: 5px;"></i>Github</a>
-        <span class="pull-right">Nature Methods 2015</span>
-      </p>
+
+      <figure><img src="img/projects/magi-fs8.png"></figure>
+      <div class="body">
+        <p class="header">MAGI</p>
+        <p class="content">
+          MAGI is an online cancer genomics visualization tool, which supports
+          visual exploration over five types of mutation data.
+          <a href="http://magi.brown.edu">(use)</a>
+          <a href="http://www.nature.com/nmeth/journal/v12/n6/full/nmeth.3412.html">(paper)</a>
+          <a href="https://github.com/raphael-group/magi">(source)</a>
+        </p>
+        <p class="footer">
+          <i class="skillBadge badgeDev">full stack</i>
+          <i class="skillBadge badgeDev">Javascript</i>
+          <i class="skillBadge badgeTech">D3.js</i>
+          <i class="skillBadge badgeTech">node.js</i>
+          <i class="skillBadge badgeTech">MongoDB</i>
+        </p>
+      </div>
     </div>
   </div>
 
   <div class="cardFlex-item">
     <div class="card">
-      <p class="header">GD3</p>
-      <p class="content">
-        GD3 is cancer genomics visualization library designed to make
-          it easier to make interactive cancer visualizations.
-          Built on top of D3, GD3 simplifies design by allowing users to
-          declaratively style visualizations with JSONs.
-          More complex stylization (e.g., global color configuration and
-          brushing) is handled through simple dispatch configuration
-      </p>
-      <p class="footer">
-        <a href="https://github.com/raphael-group/gd3" class="btn btn-default btn-xs"><i class="fa fa-github-square" style="margin-right: 5px;"></i>Github</a>
-      </p>
+      <figure><img src="img/projects/heatmap.min.svg"></figure>
+      <div class="body">
+        <p class="header">GD3</p>
+        <p class="content">
+          GD3 is a declarative cancer genomics visualization library built on top
+          of D3.
+          <a href="https://github.com/raphael-group/gd3">(source)</a>
+        </p>
+        <p class="footer">
+          <i class="skillBadge badgeDev">Javascript</i>
+          <i class="skillBadge badgeTech">D3.js</i>
+        </p>
+      </div>
     </div>
   </div>
 
   <div class="cardFlex-item">
     <div class="card">
-      <p class="header">Molli / TuftsViewer</p>
-      <figure><img src="img/molli.png"></figure>
-      <p class="content">
-        Molli is a protein visualization tool that was built to support
-          comparative structural analysis. In addition to rendering 3D
-          structure, Molli also shows aligned sequences and
-          residue information for each of the displayed proteins
-      </p>
-      <p class="footer">
-        <a href="http://dx.doi.org/10.1109/MCG.2012.66" class="btn btn-default btn-xs"><i class="fa fa-external-link" style="margin-right: 5px;"></i>Paper</a>
-        <a href="https://code.google.com/archive/p/molli/" class="btn btn-default btn-xs"><i class="fa fa-file-code-o" style="margin-right: 5px;"></i>Google Code</a>
-        <span class="pull-right">CG&amp;A 2012</span>
-      </p>
+      <figure><img src="img/projects/molli-fs8.png"></figure>
+      <div class="body">
+        <p class="header">Molli / TuftsViewer</p>
+        <p class="content">
+          Molli is a protein visualization tool that supports
+            comparative structural analysis via 3D models, sequence alignment,
+            and residue information.
+            <a href="http://dx.doi.org/10.1109/MCG.2012.66">(paper)</a>
+            <a href="https://code.google.com/archive/p/molli/">(source)</a>
+        </p>
+        <p class="footer">
+          <i class="skillBadge badgeDev">C++</i>
+          <i class="skillBadge badgeTech">OpenGL</i>
+          <i class="skillBadge badgeEval">quantitative</i>
+        </p>
+      </div>
     </div>
   </div>
 
@@ -219,98 +316,135 @@
 
   <div class="cardFlex-item">
     <div class="card">
-      <p class="header">Crowdsourcing methodology</p>
-      <figure><img src="img/crowdsourcingMethods.svg"></figure>
-      <p class="content">
-        In this study I helped test and categorize novice crowdsourcing
-          requester strategies while also collecting faculty
-          information about the top 50 computer science departments in the USA.
-      </p>
-      <p class="footer">
-        <a href="pdf/papoutsaki-2015-cfs.pdf" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i>PDF</a>
-        <a href="http://cs.brown.edu/people/alexpap/faculty_dataset.html" class="btn btn-default btn-xs"><i class="fa fa-info-circle" style="margin-right: 5px;"></i>Info</a>
-        <span class="pull-right"><i class="fa fa-trophy"></i>HCOMP 2015</span>
-      </p>
+      <figure><img src="img/projects/crowdsourcingMethods.min.svg"></figure>
+      <div class="body">
+        <p class="header">Crowdsourcing methodology</p>
+        <p class="content">
+          I helped test and categorize crowdsourcing
+            requester strategies through a computer science faculty information
+            gathering task.
+            <a href="http://cs.brown.edu/people/alexpap/faculty_dataset.html">(use)</a>
+            <a href="pdf/papoutsaki-2015-cfs.pdf">(paper)</a>
+        </p>
+        <p class="footer">
+          <i class="skillBadge badgeEval">crowd sourcing</i>
+        </p>
+      </div>
     </div>
   </div>
 
   <div class="cardFlex-item">
     <div class="card">
-      <p class="header">Heapviz</p>
-      <figure><img src="img/heapviz.png"></figure>
-      <p class="content">
-        Heapviz is a visualization tool to explore snapshots of the Java
-        heap captured during runtime. I helped create the visualization
-        interface, which shows simplified Java heap information so that
-        otherwise sprawling Java heaps are simplified so that data
-        structures are recognizable.
-      </p>
-      <p class="footer">
-        <a href="pdf/aftandilian-2010-hih.pdf" class="btn btn-default btn-xs"><i class="fa fa-file-pdf-o" style="margin-right: 5px;"></i>PDF</a>
-        <a href="http://www.cs.tufts.edu/research/redline/heapviz/" class="btn btn-default btn-xs"><i class="fa fa-info-circle" style="margin-right: 5px;"></i>Info</a>
-        <span class="pull-right">SoftVis 2010; Sage's InfoVis</span>
-      </p>
+      <figure><img src="img/projects/heapviz-fs8.png"></figure>
+      <div class="body">
+        <p class="header">Heapviz</p>
+        <p class="content">
+          Heapviz is a tool to help debug Java applications at
+          runtime by visualizing summaries of Java heap snapshots.
+          <a href="pdf/aftandilian-2010-hih.pdf">(paper)</a>
+        </p>
+        <p class="footer">
+          <i class="skillBadge badgeDev">Java</i>
+          <i class="skillBadge badgeTech">Prefuse</i>
+        </p>
+      </div>
     </div>
   </div>
 
   </div> <!-- end cardFlex-container -->
 </section> <!-- end projects section -->
 
-<section class="aboutMe">
-  <h1>About me</h1>
-  <div class="aboutMe-item aboutMe-description">
-    <p>I’m currently a computer science PhD candidate and National Science
-      Foundation graduate research fellow at Brown University.</p>
+<section class="resume" id="resume">
+  <h1 class="fancyH1">Resume at a Glance</h1>
+  <strong class="resume_pdfBlock">Full resume: <a href="">(pdf)</a></strong>
+  <div class="resume_container">
+    <div class="resume_item">
+      <strong>Education</strong>
+      <p>Brown University. 2012 – 2017 (expected)<br />Ph.D. in Computer Science</p>
+      <p>Brown University. 2012 – 2014<br />Sc.M. in Computer Science</p>
+      <p>Tufts University. 2008 – 2012<br />B.S. in Computer Science<br />Minor in Religion<br />Cum Laude with Highest Thesis Honors</p>
+    </div>
+    <div class="resume_item">
+      <strong>Research and Teaching Experience</strong>
+      <p><em>Brown University</em><br />Graduate Researcher, 2012 – 2017.</p>
+      <p><em>Tufts University</em><br />Undergraduate Researcher, 2010 – 2012.<br />Head TA, Computer Graphics<br />TA, Data Structures<br />TA, Intro to Computer Science</p>
+    </div>
 
-    <p>While my research foundation is in visualization, I also have experience
-        or familiarty with other research areas like visual perception,
-        human-computer interaction, experimental design and analysis,
-        data mining, and computational cancer genomics.
-        I'm particularly excited about the intersection of visualization with
-        applications of machine learning.
-        Looking forward, I would love to continue working in multidisciplinary,
-        diverse teams.</p>
+    <div class="resume_item">
+      <strong>Abbreviated Development Experience</strong>
+      <p><em>Brown University</em><br />Led or contributed to several collaborative research projects through design, full-stack development, and evaluation (see <a href="#projects">projects</a>)</p>
+      <p><em>Google, Inc.</em><br /> Conceptualized and implemented a new feature for Google+ using C++ (MapReduce, BigTable), Java (asynchronous middleware), and Javascript</p>
+      <p><em>Charles River Analytics</em><br /> Devised a NASA TLX user study to evaluate emergency response management visualization and a Java/Swing prototype for pilotting multiple unmanned vehciles</p>
+      <p><em>Tufts University</em><br /> Aided the creation and evaluation of several visualization and graphics projects (see <a href="#projects">projects</a>)</p>
+    </div>
 
-    <p>Before Brown, I graduated from Tufts University with a B.S. in computer
-        science. I also minored in religion and drummed, danced, and sang
-        in Kiniwe – Tufts’ Ghanaian performance ensemble – for four years,
-        which was then directed by Professors Nani Agbeli (now at CalArt) and
-        David Locke.</p>
+    <div class="resume_item">
+      <strong>Publications</strong>
+      <ul class="resume_pubList">
+        <li><span class="underline">An Analysis of Automated Visual Analysis Classification: Visualization Task Inference of Cancer Genomics Domain Experts</span>. Connor C. Gramazio, et al. Under Review.</li>
+        <li><span class="underline">A cancer genomics visualization task requirements analysis and design study of MAGI</span>. Connor C. Gramazio, et al. Under Review.</li>
+        <li><a href="pdf/gramazio-2016-ccd.pdf">Colorgorical: Creating Discriminable and Preferable Color Palettes for Information Visualization</a>. Connor C. Gramazio, David H. Laidlaw, and Karen B. Schloss. Transactions on Visualization and Computer Graphics (Proc. Information Visualization 2016). 2017.</li>
+        <li><a href="https://dx.doi.org/10.1038/nmeth.3412">MAGI: visualization and collaborative annotation of genomic aberrations</a>. Mark D.M. Leiserson, Connor C. Gramazio, Jason Hu, Hsin-Ta Wu, David H. Laidlaw, and Benjamin J. Raphael. Nature Methods. 2015.</li>
+        <li><a href="pdf/li-2015-ehv.pdf">Exploring hierarchical visualization designs using phylogenetic trees</a>. Shaomeng Li, R. Jordan Crouser, Garth Griffin, Connor C. Gramazio, Hans-Jörg Schulz, Hank Childs, and Remco Chang. Proc. Visualization and Data Analysis. 2015.</li>
+        <li><a href="pdf/papoutsaki-2015-cfs.pdf">Crowdsourcing from Scratch: A Pragmatic Experiment in Data Collection by Novice Requesters</a>. Alexandra Papoutsaki, Hua Guo, Danae Metaxa-Kakavouli, Connor C. Gramazio, Jeff Rasley, Wenting Xie, Guan Wang, and Jeff Huang. Proceedings of The AAAI Conference on Human Computation and Crowdsourcing (HCOMP). 2015.</li>
+        <li><a href="pdf/gramazio-2012-trb.pdf">The relation between visualization size, grouping, and user performance</a>. Connor C. Gramazio, Karen B. Schloss, and David H. Laidlaw. Transactions on Visualization and Computer Graphics (Proc. Information Visualization ’14). 2014.</li>
+        <li><a href="https://dx.doi.org/10.1177%2F1473871612438786">Heapviz: Interactive heap visualization for program understanding and debugging (Extended)</a>. Sean Kelley, Edward Aftandilian, Connor Gramazio, Nathan Ricci, Sara L. Su, and Samuel Z. Guyer. Information Visualization. 2013.</li>
+        <li><a href="https://doi.org/10.1109/MCG.2012.66">Molli: Interactive Visualization for Exploratory Protein Analysis</a>. Sara L. Su, Connor C. Gramazio, Daniela Extrum-Fernandez, Caitlin Crumm, Lenore J. Cowen, Matthew Menke, and Megan Strait. IEEE Computer Graphics and Applications. 2012.</li>
+        <li><a href="pdf/aftandilian-2010-hih.pdf">Heapviz: Interactive Heap Visualization for Program Understanding and Debugging</a>. Edward E. Aftandilian, Sean Kelley, Connor Gramazio, Nathan Ricci, Sara L. Su, and Samuel Z. Guyer. Proceedings of the 5th International Symposium on Software Visualization. 2010.</li>
+      </ul>
+    </div>
+  </div>
+</section><!-- end resume section -->
 
-    <p>In college I got hooked on learning about and experiencing other
-      cultures (I actually started out majoring in international relations!).
-      Since graduating from college, I've been lucky enough to be able to visit
-      and explore several countries first-hand.
-      Most of my travels have focused on experiencing the outdoors, like
-      backpacking the
-      <a href="https://en.wikipedia.org/wiki/West_Highland_Way">West
-      Highland Way</a> and diving in the
-      <a href="https://en.wikipedia.org/wiki/Belize_Barrier_Reef">Belize Barrier
-      Reef</a>.
-      My favorite way to travel is with nothing more than a carry-on backpack.
-    </p>
+<!-- <div class="jagged-border"></div> -->
+<section class="fun jagged-border" id="fun">
+  <h1>Fun</h1>
+
+  <div class="fun_intro">
+    <p class="fun_description">
+      In college, through minoring in Religion and performing in Kiniwe – Tufts’
+      Ghanaian performance ensemble – for four years, I got hooked on learning
+      about and experiencing other cultures.
+      Since graduating from college, I’ve been lucky enough to explore
+      several countries first hand.
+      Much of my traveling is inspired by
+      experiencing the outdoors, like backpacking the West Highland Way or diving
+      in the Belize Barrier Reef.
+      My favorite way to travel is with nothing more than a
+      carry-on backpack.</p>
+    <div class="fun_flags">
+      <div class="flag-wrapper"><span class="flag-icon flag-icon-us"></span></div>
+      <div class="flag-wrapper"><span class="flag-icon flag-icon-ca"></span></div>
+      <div class="flag-wrapper"><span class="flag-icon flag-icon-ie"></span></div>
+      <div class="flag-wrapper"><span class="flag-icon flag-icon-gh"></span></div>
+      <div class="flag-wrapper"><span class="flag-icon flag-icon-cr"></span></div>
+      <div class="flag-wrapper"><span class="flag-icon flag-icon-is"></span></div>
+      <div class="flag-wrapper"><span class="flag-icon flag-icon-fr"></span></div>
+      <div class="flag-wrapper"><span class="flag-icon flag-icon-es"></span></div>
+      <div class="flag-wrapper"><span class="flag-icon flag-icon-pt"></span></div>
+      <div class="flag-wrapper"><span class="flag-icon flag-icon-gb"></span></div>
+      <div class="flag-wrapper"><span class="flag-icon flag-icon-pe"></span></div>
+      <div class="flag-wrapper"><span class="flag-icon flag-icon-nl"></span></div>
+      <div class="flag-wrapper"><span class="flag-icon flag-icon-bz"></span></div>
+      <div class="flag-wrapper"><span class="flag-icon flag-icon-gt"></span></div>
+      <div class="flag-wrapper"><span class="flag-icon flag-icon-it"></span></div>
+    </div>
+  </div>
+
+  <div class="fun_photos">
+    <div class="photo tall left ghana"></div>
+    <div class="photo wide right iceland"></div>
+    <div class="photo wide right peru"></div>
+    <div class="photo wide left costarica"></div>
+    <div class="photo wide left grandcanyon"></div>
+    <div class="photo tall right sevilla"></div>
   </div>
 
   <div class="aboutMe-item">
     <div id="worldmap">
-      <img src="img/map.png" />
-    </div>
-      <div id="flags">
-        <div class="flag-wrapper"><span class="flag-icon flag-icon-us"></span></div>
-        <div class="flag-wrapper"><span class="flag-icon flag-icon-ca"></span></div>
-        <div class="flag-wrapper"><span class="flag-icon flag-icon-ie"></span></div>
-        <div class="flag-wrapper"><span class="flag-icon flag-icon-gh"></span></div>
-        <div class="flag-wrapper"><span class="flag-icon flag-icon-cr"></span></div>
-        <div class="flag-wrapper"><span class="flag-icon flag-icon-is"></span></div>
-        <div class="flag-wrapper"><span class="flag-icon flag-icon-fr"></span></div>
-        <div class="flag-wrapper"><span class="flag-icon flag-icon-es"></span></div>
-        <div class="flag-wrapper"><span class="flag-icon flag-icon-pt"></span></div>
-        <div class="flag-wrapper"><span class="flag-icon flag-icon-gb"></span></div>
-        <div class="flag-wrapper"><span class="flag-icon flag-icon-pe"></span></div>
-        <div class="flag-wrapper"><span class="flag-icon flag-icon-nl"></span></div>
-        <div class="flag-wrapper"><span class="flag-icon flag-icon-bz"></span></div>
-        <div class="flag-wrapper"><span class="flag-icon flag-icon-gt"></span></div>
-        <div class="flag-wrapper"><span class="flag-icon flag-icon-it"></span></div>
+      <!-- Thanks to Wikipedia for the great collection of vector formatted world maps! -->
+      <!-- By Frank Bennett - http://www.law.nagoya-u.ac.jp/en/appendix/software/worldmap/Refactored from Image:BlankMap-World6.svg, q.v., Public Domain, https://commons.wikimedia.org/w/index.php?curid=3231806 -->
+      <img src="img/BlankMap-FlatWorld6.min.svg" />
     </div>
   </div>
 

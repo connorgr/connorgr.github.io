@@ -1,0 +1,77 @@
+@import "sizes.scss";
+
+.introduction {
+  background: #bcc0c9;
+  background: radial-gradient(ellipse farthest-corner at 45px 45px , #e8e9ef 0%, rgba(243, 247, 255, 0.6) 50%, #fff 95%);
+  background: -moz-radial-gradient(ellipse farthest-corner at 45px 45px , #e8e9ef 0%, rgba(243, 247, 255, 0.6) 50%, #fff 95%);
+  background: -webkit-radial-gradient(ellipse farthest-corner at 45px 45px , #e8e9ef 0%, rgba(243, 247, 255, 0.6) 50%, #fff 95%);
+  background-attachment: fixed;
+  margin: 0px;
+  min-height: 95vh;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.introduction-item {
+  width: 50vw; // renders faster than flex: 1
+}
+
+.introduction h1 {
+  display: inline-block;
+  font-size: 56px;
+  margin: $nav_totalHeight*2 30px 0 30px;
+}
+.portrait { display: inline-block; margin-right: 10px; vertical-align: middle; }
+.introduction_header {
+  color: rgba(0,0,0, 0.5);
+  display: inline-block;
+  vertical-align: middle;
+}
+@media (max-width: $size_lg) and (min-width: $size_md+1) { .introduction h1 { font-size: 48px; } }
+@media (max-width: $size_md) and (min-width: $size_sm+1) { .introduction h1 { font-size: 36px; } }
+@media (max-width: $size_sm) { .introduction h1 { font-size: 36px; } }
+
+
+.introductionContentContainer {
+  align-items: center;
+  background: rgba(255,255,255,0.6);
+  display: flex;
+  font-size: 18px;
+  min-height: 95vh;
+  padding: 30px;
+}
+
+@media (max-width: 767px) {
+  .introduction {
+    flex-wrap: wrap;
+  }
+  .introduction-item {
+    width: 100vw;
+  }
+  .introduction h1 {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    height: 30vh;
+  }
+  .introductionContentContainer {
+    align-items: center;
+    background: rgba(255,255,255,0.6);
+    display: block;
+    font-size: 18px;
+    min-height: 65vh;
+    padding: 30px;
+  }
+}
+
+.introductionContent {
+  float: left;
+  max-width: 600px;
+}
+.introductionContent p {
+  margin-bottom: 36px;
+}
+.introductionContent hr {
+  border-top: 1px solid #999;
+}

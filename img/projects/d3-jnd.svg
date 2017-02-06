@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 150 150" style="enable-background:new 0 0 150 150;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#333333;}
+	.st1{fill:#2E4C97;}
+	.st2{fill:#2C4898;}
+	.st3{fill:#2B439A;}
+	.st4{fill:#293E9B;}
+	.st5{fill:#27399E;}
+	.st6{opacity:0.5;}
+	.st7{fill:none;stroke:#0D172B;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<rect id="bg" class="st0" width="150" height="150"/>
+<g id="jnd_squares">
+	<rect x="15" y="75" class="st1" width="24" height="24"/>
+	<rect x="39" y="75" class="st2" width="24" height="24"/>
+	<rect x="63" y="75" class="st3" width="24" height="24"/>
+	<rect x="87" y="75" class="st4" width="24" height="24"/>
+	<rect x="111" y="75" class="st5" width="24" height="24"/>
+	<rect x="15" y="51" class="st1" width="120" height="24"/>
+	<g class="st6">
+		<line class="st7" x1="39" y1="99" x2="39" y2="51"/>
+		<line class="st7" x1="63" y1="99" x2="63" y2="51"/>
+		<line class="st7" x1="87" y1="99" x2="87" y2="51"/>
+		<line class="st7" x1="111" y1="99" x2="111" y2="51"/>
+	</g>
+	<rect x="15" y="51" class="st7" width="120" height="48"/>
+</g>
+</svg>
