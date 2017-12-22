@@ -1,0 +1,108 @@
+.projects {
+  border-top: 1px dotted rgba(0,0,0,0.1);
+  grid-column: 2/12;
+}
+
+.projects h1 {
+  font-variant-caps: small-caps;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+.projects h2 {
+  background: #eee;
+  border-top: 1px solid #ccc;
+  padding: 1em 0;
+}
+.projects h2 mark {
+  background: white;
+  border-bottom-right-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+  padding: 0.25em 0.25em 0.25em 0;
+}
+
+.projects-card {
+  border: 1px solid #eee;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 1em;
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+.projects-card figure {
+  background: #eee;
+  border-right: 1px solid #eee;
+  grid-column: 1;
+  grid-row: 1/4;
+  margin: 0;
+  padding: 0;
+}
+
+.projects-card figure img {
+  background: white;
+}
+
+.projects-card figure, .projects-card figure img {
+  width: 150px;
+}
+
+.projects-card p {
+  margin-bottom: 0;
+}
+
+.projects-card-header {
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+  grid-column: 2;
+  grid-row: 1;
+  padding: 0.5em 0;
+}
+
+.projects-card-content {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.projects-card-footer {
+  grid-column: 2;
+  grid-row: 3;
+  padding-bottom: 1em;
+}
+
+.skillBadge {
+  display: inline-block;
+  font-size: 12px;
+  font-style: normal;
+  margin: 2px 0;
+  padding: 0px 4px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.badgeDev {
+    background: rgba(154, 173, 236, 0.75);
+}
+
+.badgeTech {
+    background: rgba(122, 220, 148, 0.75);
+}
+
+.badgeEval {
+    background: rgba(195, 155, 224, 0.75);
+}
+
+@media #{$mobile} {
+  .projects-card {
+    display: block;
+  }
+
+  .projects-card figure {
+    border-right: none;
+    width: 100%;
+  }
+
+  .projects-card-content, .projects-card-footer, .projects-card-header {
+    padding: 0.5em;
+  }
+}

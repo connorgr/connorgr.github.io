@@ -1,0 +1,68 @@
+.landing {
+  padding-top: 6em;
+}
+
+.landing-intro {
+  grid-column: 2/11;
+  grid-row: 2/6;
+}
+
+.landing-splash {
+  padding: 1em;
+}
+.landing-splash-left {
+  border: 1px solid orange;
+  box-shadow: 5px 5px 0px orange;
+  grid-column: 2/9;
+}
+.landing-splash-right {
+  border: 1px solid gray;
+  box-shadow: -5px 5px 0px gray;
+  grid-column: 4/11;
+}
+
+@media #{$maxGridWidthMedia} {
+  .nav-header {
+    grid-column: 2/12;
+    grid-row: 1;
+  }
+
+  .nav-header ul li {
+    display: inline-block;
+    margin-left: 1em;
+  }
+  .nav-header ul li:first-child {
+    margin-left: 0em;
+  }
+
+  .landing-intro {
+    grid-column: 2/12;
+    grid-row: 2/6;
+  }
+
+  .landing-splash ul {
+    margin-bottom: 1.4em;
+    padding-left: 1em;
+  }
+
+  .landing-splash-left {
+    grid-column: 2/12;
+  }
+
+  .landing-splash-right {
+    box-shadow: 5px 5px 0px gray;
+    grid-column: 2/12;
+  }
+
+  .nav-header ul li a:before {
+    left: -0.75em !important;
+    position: absolute;
+  }
+
+  @keyframes bounce {
+    0%, 100% { opacity: 0.75; transform: translate(0em, 0); }
+    50% { opacity: 1.0; transform: translate(0.05em, 0); }
+  }
+}
+
+@import "projects.scss";

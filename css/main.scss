@@ -1,6 +1,134 @@
-@import "sass/global.scss";
-@import "sass/nav.scss";
-@import "sass/section_intro.scss";
-@import "sass/section_projects.scss";
-@import "sass/section_resume.scss";
-@import "sass/section_fun.scss";
+@import "color.scss";
+@import "global.scss";
+@import "contact/contact.scss";
+@import "landing/landing.scss";
+@import "resume/resume.scss";
+
+body {
+  margin: 0 auto;
+}
+
+p, li {
+  font-size: 1em;
+  line-height: 1.4em;
+}
+p:last-child, li:last-child {
+  margin-bottom: 0;
+}
+p {
+  margin: 0 0 1.4em 0;
+}
+
+.grid {
+  display: grid;
+  font-family: sans-serif;
+  grid-template-columns: repeat(12,1fr);
+  grid-gap: 2em;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+footer {
+  background: #333;
+  grid-column: 1/13;
+}
+
+ul.unstyled { list-style: none; }
+ul.left-flush { padding-left: 0; }
+
+.divider-crossed {
+  grid-column: 2/11;
+  background:
+     linear-gradient(to top left,
+         rgba(0,0,0,0) 10%,
+         rgba(0,0,0,0) calc(50% - 0.8px),
+         rgba(0,0,0,1) 50%,
+         rgba(0,0,0,0) calc(50% + 0.8px),
+         rgba(0,0,0,0) 100%),
+     linear-gradient(to top right,
+         rgba(0,0,0,0) 10%,
+         rgba(0,0,0,0) calc(50% - 0.8px),
+         rgba(0,0,0,1) 50%,
+         rgba(0,0,0,0) calc(50% + 0.8px),
+         rgba(0,0,0,0) 100%);
+         width:100%;
+         height:14px;
+         background-size:14px 14px;
+}
+.divider-dashed {
+  border-bottom: 1px dotted rgba(0,0,0,0.1);
+  grid-column: 2/11;
+}
+
+.nav-header {
+  grid-column: 2/5;
+  grid-row: 1/6;
+}
+
+.nav-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-header ul li {
+  margin-bottom: 1em;
+  position: relative;
+}
+.nav-header ul li a {
+  color: black;
+  text-decoration: none;
+}
+.nav-header ul li a:before {
+  content: '❭';
+  display: none;
+  position: absolute;
+  left: -1.5em;
+  top: 0;
+}
+.nav-header ul li a:hover {
+  animation: navColoration 0.1s forwards;
+}
+.nav-header ul li a:hover:before {
+  animation: bounce 2s infinite;
+  display: block;
+}
+.nav-header ul li:last-child {
+  margin-bottom: 0em;
+}
+
+.nav-header {
+  grid-column: 2/11;
+  grid-row: 1;
+}
+.nav-header-horizontal ul li {
+  display: inline-block;
+  margin-left: 2.5em;
+}
+.nav-header-horizontal ul li:first-child {
+  margin-left: 0;
+}
+
+@keyframes bounce {
+  0%, 100% { opacity: 0.75; transform: translate(0em, 0); }
+  50% { opacity: 1.0; transform: translate(0.5em, 0); }
+}
+@keyframes navColoration {
+  0% { color: black; }
+  100% { color: orange; }
+}
+
+@media #{$maxGridWidthMedia} {
+  .divider-dashed {
+    grid-column: 2/12 !important;
+  }
+}
+
+@media #{$mobile} {
+  .grid {
+    grid-column-gap: 0.5em;
+  }
+  .nav-header-horizontal ul li {
+    margin-left: 0.5em;
+  }
+}

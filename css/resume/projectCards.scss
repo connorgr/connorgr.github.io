@@ -1,0 +1,114 @@
+.resume-section .cardlist {
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+.resume-section .cardlist li {
+  /*border: 3px solid rgba(200,200,200,1);*/
+  border-radius: 10px;
+  /*box-shadow: 5px 5px 0 0 rgb(175,175,175), 5px 5px 5px 5px rgba(0,0,0,0.1);*/
+  /*box-shadow: 0 0 2px 2px rgba(0,0,0,0.1);*/
+  box-shadow: 2px 2px 0px 0px rgb(100,100,100), 3px 3px 3px 3px rgba(0,0,0,0.1);
+  display: inline-block;
+  height: 200px;
+  margin: 7px 5px;
+  vertical-align: top;
+  width: 200px;
+}
+
+.resume-section .cardlist li a {
+  /*background: rgb(100,100,100);*/
+  /*border: 1px solid rgb(100,100,100);*/
+  border-radius: 10px;
+  display: block;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.resume-section .cardlist li a:before {
+  background-color: rgb(200,200,200);
+  filter: grayscale(1);
+  border-radius: 10px;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.resume-section .cardlist li a:hover:before {
+  filter: grayscale(0);
+}
+
+.resume-section .cardlist li .behaviorClassificationBG:hover:before {
+  background: url('../img2/projects/interactionLog-fs8.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.resume-section .cardlist li .chromaticityBG:hover:before {
+  background: url('../img2/projects/chromaticity.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.resume-section .cardlist li .colorgoricalBG:hover:before {
+  background: url('../img2/projects/colorgorical-fs8.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.resume-section .cardlist li .d3cam02BG:hover:before {
+  background: url('../img2/projects/d3-cam02.min.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.resume-section .cardlist li .d3jndBG:hover:before {
+  background: url('../img2/projects/d3-jnd.min.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+/*.resume-section .cardlist li:nth-child(3n+2) { background: red; }
+.resume-section .cardlist li:nth-child(3n+1) { background: green; }
+.resume-section .cardlist li:nth-child(3n) { background: blue; }*/
+
+.resume-section .cardlist .cardtitle {
+  background: rgba(20,20,20,0.9);
+  /*background: rgba(240,240,240,0.9);*/
+  border-bottom: 3px solid rgba(0,0,0,0.25);
+  /*border-left: 1px solid rgba(0,0,0,0.1);
+  border-right: 1px solid rgba(175,175,175);*/
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /*color: black;*/
+  color: rgb(225,225,225);
+  display: block;
+  height: 50px;
+  letter-spacing: 1px;
+  line-height: 50px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+.resume-section .cardlist .carddescription {
+  bottom: 0;
+  display: inline;
+  padding: 10px;
+  position: absolute;
+}
+.resume-section .cardlist .carddescription mark {
+  background-color: rgb(255, 165, 0); /*rgba(255,255,255,0.75);*/
+  color: rgba(0,0,0,0.75);
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+.resume-section .cardlist li a:hover .carddescription mark {
+  display: none;
+  visibility: hidden;
+}

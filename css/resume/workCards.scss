@@ -1,0 +1,46 @@
+.resume-section .callout {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-top-style: solid;
+  border-top-width: 10px;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.resume-section .callout ul {
+  margin-top: 1em;
+}
+.resume-section .callout ul li {
+  margin-bottom: 0.25em;
+}
+.resume-section .callout ul li:last-child {
+  margin-bottom: 0;
+}
+
+.resume-section .audibleCallout {
+  border-color: $audibleOrange;
+  // border: 1px solid $audibleOrange;
+  // border-radius: 20px;
+  // box-shadow: 5px 5px 0px 0px $audibleOrange, 5px 5px 5px 5px rgba(0,0,0,0.1);
+}
+
+.resume-section .brownCallout {
+  border-color: $brownRed;
+  // border-radius: 20px;
+  // box-shadow: 5px 5px 0px 0px $brownRed, 5px 5px 5px 5px rgba(0,0,0,0.1);
+  // margin-bottom: 1em;
+  // padding: 1em;
+}
+
+.resume-section .googleCallout {
+  border-color: $googleBlue;
+  // border-radius: 20px;
+  // box-shadow: 5px 5px 0px 0px $googleBlue, 5px 5px 5px 5px rgba(0,0,0,0.1);
+  // margin-bottom: 1em;
+  // padding: 1em;
+}
+
+.resume-section .role-description {
+  margin: 0;
+  font-style: italic;
+}
