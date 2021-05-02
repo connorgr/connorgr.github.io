@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,yBAA0B;EACxB,MAAM,EAAE,MAAM;EACd,OAAO,EAAE,CAAC;;AAGZ,4BAA6B;EAC3B,UAAU,EAAE,GAAG;EAGf,OAAO,EAAE,YAAY;EAErB,MAAM,EAAE,MAAM;EACd,cAAc,EAAE,GAAG;EACnB,KAAK,EAAE,IAAI",
-"sources": ["projectCards2.scss"],
-"names": [],
-"file": "projectCards2.css"
-}
