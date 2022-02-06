@@ -8,36 +8,41 @@
 <meta name="keywords" content="Connor,Gramazio,visualization,machine,learning,machine learning,ai,hci,artificial,intelligence,artificial intelligence,nlu,natural language understanding,nlp,natural language processing,mle,dn,nlu,natural language understanding,alexa,alexa ai,pillpack,amazon pharmacy,amazon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="tailwind.css" type="text/css">
+<link rel="stylesheet" href="custom.css" type="text/css">
 </head>
 <body>
 
-<section class="text-xl relative py-0 px-5" style="background: rgb(55,55,60)">
-    <div class="flex flex-wrap mx-auto py-12 w-full" style="max-width: 800px;">
-        <div class="w-1/4 py-1">
-              <div role="img" aria-label="A portrait of Connor."><img class="mx-auto shadow-md rounded-full"  src="img/bhutan_connor_square.jpg" /></div>
-        </div>
-
-        <div class="w-3/4 py-1 px-10">
-            <div class="relative py-1">
-                <h1 class="text-3xl font-bold" style="color: #2F96FB">Connor Gramazio</h1>
-                  <ul class="inline-block align-middle py-2">
-                    <li class="text-sm sm:text-xl font-medium py-0.5" style="color: #4A86AF">Senior Software Engineer, Amazon</li>
-                    <li class="text-sm sm:text-xl font-light py-0.5" style="color: #7A8D9D">Machine learning engineering focus</li>
-                    <li class="text-sm sm:text-xl font-light py-0.5" style="color: #7A8D9D">Computer Science PhD, data visualization</li>
-                  </ul>
-            </div>
-        </div>
+<section class="text-xl relative py-0 px-5 intro">
+  <div class="flex flex-wrap mx-auto py-12 w-full" style="max-width: 800px;">
+    <div class="w-1/4 py-1">
+      <figure class="portrait">
+        <img alt="A portrait of Connor with dark brown hair and eyes, a short-kept beard, and with a backdrop of the Himalaya mountains" class="mx-auto shadow-md rounded-full"  src="img/bhutan_connor_square.jpg" />
+      </figure>
     </div>
+
+    <div class="w-3/4 py-1 px-10">
+      <div class="relative py-1">
+        <div class="whoami">
+          <h1 class="text-3xl font-bold">Connor Gramazio</h1>
+          <ul class="inline-block align-middle py-2">
+            <li class="text-sm sm:text-xl py-0.5">Senior Software Engineer</li>
+            <li class="text-sm xs:text-xl py-0.5">Computer Science PhD</li>
+            <li class="text-sm xs:text-xl py-0.5">he/him/his</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<svg role="img" style="margin-top: -1px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" width="100%" height="75px"><path fill="rgb(55,55,60)" fill-opacity="1" d="M0,160L60,144C120,128,240,96,360,80C480,64,600,64,720,90.7C840,117,960,171,1080,197.3C1200,224,1320,224,1380,224L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+<svg role="img" style="margin-top: -1px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" width="100%" height="75px"><path fill="#eef6ff" fill-opacity="1" d="M0,160L60,144C120,128,240,96,360,80C480,64,600,64,720,90.7C840,117,960,171,1080,197.3C1200,224,1320,224,1380,224L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
 
-<section class="mx-auto w-full relative px-5 sm:px-5 md:px-0" style="max-width: 800px">
+<section class="mx-auto w-full relative px-5 sm:px-5 md:px-0 main-content" style="max-width: 800px">
   <article class="prose">
     <h1>About</h1>
-    <p><strong>I am an SDE3 (i.e., Senior SDE) at Amazon</strong>, where I focus on machine learning and data-intensive software. I currently work within Amazon Pharmacy (PillPack). Previously I worked in Alexa AI, where I was the technical lead for developing scalable and reliable C++ and Python software for mission-critical natural language understanding models.</p>
-    <p>I am a strong advocate of inclusive and accessible human-entered computing. <strong>I view computer science as a field that extends beyond algorithms alone</strong>.</p>
-    <p>Before joining the software industry, <strong>I completed a Computer Science PhD as a National Science Foundation Graduate Research Fellow at Brown University</strong>. My dissertation focused on visualization design, and drew on a variety of research methods: my work involved not just software development, but also both quantitative and qualitative human subject evaluation. Although I am now an SDE, I still have a strong UXR perspective.</p>
+    <p><strong>I am an SDE3 (i.e., Senior SDE) at Amazon, where I specialize in machine learning and data-intensive software.</strong> I currently work within Amazon Pharmacy (PillPack). Previously I worked in Alexa AI, where I was the technical lead for developing scalable and reliable C++ and Python software for mission-critical natural language understanding models.</p>
+    <p><strong>I take a human-computer interaction view of computer science; Computer science is more than just the code we write and the algorithms we design.</strong></p>
+    <p><strong>Previously, I completed a Computer Science PhD as a National Science Foundation Graduate Research Fellow at Brown University.</strong> My dissertation focused on visualization design, and I leveraged a wide array of research methods (e.g., systems work, aglorithm design, and human subject evaluation).</p>
   </article>
 
   <div class="py-5"></div>
@@ -55,11 +60,12 @@
     <div class="py-2"></div>
 
     <h2 class="text-2xl font-bold">Industry experience</h2>
-    <h3><strong>Amazon</strong>, <em>Boston and Cambridge, MA</em></h3>
+    <h3><strong>Amazon</strong>, <em>Boston and Cambridge, MA</em>, 2017 – Present</h3>
     <ul class="list-none ml-5">
-      <li>Alexa AI, Senior Software Development Engineer, 2021 April – Present</li>
-      <li>Alexa AI, Software Development Engineer, 2018 April - 2021 April</li>
-      <li>Audible on Alexa, Software Development Engineer, 2017 August – 2018 April</li>
+      <li><strong>Amazon Pharmacy, Senior Software Development Engineer / SDE3, 2021 – Present</strong></li>
+      <li>Alexa AI, Senior Software Development Engineer / SDE3, 2021</li>
+      <li>Alexa AI, Software Development Engineer, 2018 - 2021</li>
+      <li>Audible on Alexa, Software Development Engineer, 2017 – 2018</li>
     </ul>
 
     <h3><strong>Google</strong>, <em>Cambridge, MA. Software Engineer Intern. 2012.</em></h3>
@@ -78,26 +84,26 @@
 
   <article class="prose">
     <h1>Academic Research</h1>
-    <p>While in academia, I focused on information visualization design techniques and theory. My research led to eleven publications, and also additional conference posters. For a publication list, please see my <a href="https://scholar.google.com/citations?user=9dKovLsAAAAJ">Google Scholar</a> or <a href="https://dblp.org/pid/54/8734.html">dblp</a> profiles.</p>
+    <p>While in academia, I focused on information visualization design techniques and theory. My research led to eleven publications, and also additional conference posters. For a publication list, please see my <a href="https://www.semanticscholar.org/author/Connor-Gramazio/3126132">Semantic Scholar</a>, </a><a href="https://scholar.google.com/citations?user=9dKovLsAAAAJ">Google Scholar</a> or <a href="https://dblp.org/pid/54/8734.html">dblp</a> profiles.</p>
 
     <p>Much of my dissertation focuses on color's role in effective visualization. <a href="https://www.youtube.com/watch?v=7IRquody9Qc">My talk at OpenVisConf 2017</a>, <em>Empowering Effective Visualization (Color) Design</em>, highlights:</p>
     <ul>
       <li>Colorgorical: an automated tool to make categorical color palettes, taking both legibility and aesthetic preference into account.
-        <a href="http://vrl.cs.brown.edu/color">(use)</a>
-        <a href="pdf/gramazio-2016-ccd.pdf">(paper)</a>
-        <a href="https://github.com/connorgr/colorgorical">(source)</a>
+        (<a href="http://vrl.cs.brown.edu/color">use</a>)
+        (<a href="pdf/gramazio-2016-ccd.pdf">paper</a>)
+        (<a href="https://github.com/connorgr/colorgorical">source</a>)
       </li>
       <li>Chromaticity: a manual color palette generation tool based on a color picker that spans a variety of perceptual color spaces, and provides warnings about ineffective color combinations.
-        <a href="https://gramaz.io/chromaticity">(use)</a>
-        <a href="https://github.com/connorgr/chromaticity">(source)</a>
+        (<a href="https://gramaz.io/chromaticity">use</a>)
+        (<a href="https://github.com/connorgr/chromaticity">source</a>)
       </li>
       <li>d3-cam02: a D3.js module that defines CIECAM02 and CIECAM02-UCS perceptual color spaces.
-        <a href="https://gramaz.io/d3-cam02">(use)</a>
-        <a href="https://github.com/connorgr/d3-cam02">(source)</a>
+        (<a href="https://gramaz.io/d3-cam02">use</a>)
+        (<a href="https://github.com/connorgr/d3-cam02">source</a>)
       </li>
       <li>d3-jnd: a D3.js module that allows designers to quickly check whether two colors can be easily differentiated, and considers how color discriminability can shift with changes in size.
-        <a href="https://gramaz.io/d3-jnd">(use)</a>
-        <a href="https://github.com/connorgr/d3-jnd">(source)</a>
+        (<a href="https://gramaz.io/d3-jnd">use</a>)
+        (<a href="https://github.com/connorgr/d3-jnd">source</a>)
       </li>
     </ul>
 
@@ -105,6 +111,12 @@
   </article>
 
   <div class="py-5"></div>
+</section>
+<section class="footer">
+  <div class="mx-auto w-full relative px-5 sm:px-5 md:px-0" style="max-width: 800px">
+    <p><strong>Contact:</strong> <a href="https://twitter.com/ccgramazio">Twitter</a> <a href="https://www.linkedin.com/in/gramazio/">LinkedIn</a></p>
+    <p>The views expressed on this page are my own, and not of my employer.</p>
+  </div>
 </section>
 
 </body>
