@@ -83,7 +83,7 @@ em {
 .main-content h1::before {
   background: #333;
   content: '';
-  left: -2.5%;
+  left: -0.25em;
   position: absolute;
   top: -10%;
   transform: skew(-25deg);
