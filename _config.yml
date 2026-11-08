@@ -1,0 +1,5 @@
+# GitHub Pages builds this site with Jekyll. The pages are plain HTML (no front
+# matter), so Jekyll copies them through unchanged; this file only keeps
+# repo-only folders off the published site.
+exclude:
+  - tools
